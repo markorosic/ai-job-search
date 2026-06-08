@@ -8,32 +8,71 @@ Structure answers as: **Situation** (context), **Task** (your responsibility), *
 
 Keep answers to 1-2 minutes. Be specific. End with what you learned or would do differently.
 
-## Ready-Made STAR Examples
+## STAR Candidates (Complete Manually)
 
-<!-- These are populated by /setup from your actual experience. Below are templates showing the format. -->
+These are real achievements pulled from your CV / LinkedIn. The situation/task/action/result
+details are left for **you** to fill in — don't go into an interview with invented specifics.
+Aim to fully write up 4-6 covering different competencies (systems, leadership, impact, change, AI).
 
-### 1. [PROJECT_NAME] ([SKILL_DEMONSTRATED])
-**S:** [CONTEXT - what was happening, what was the problem]
-**T:** [YOUR RESPONSIBILITY - what you specifically needed to do]
-**A:** [WHAT YOU DID - specific actions, tools, methods]
-**R:** [OUTCOME - measurable results, adoption, impact]
-**Use for:** "[QUESTION_TYPE_1]", "[QUESTION_TYPE_2]"
+### Company-level design system at Gentoo Media (Design systems / DesignOps)
+**Source:** CV / LinkedIn — Head of UX/UI, Gentoo Media
+**What happened:** Established a company-level design system across multi-brand products; reduced feature time-to-market by 25%.
+**Why it matters:** Answers "tell me about building design infrastructure", "driving measurable impact", "scaling consistency".
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result: (TTM −25% — quantify scope: how many brands/teams)
 
-### 2. [PROJECT_NAME] ([SKILL_DEMONSTRATED])
-**S:** [CONTEXT]
-**T:** [YOUR RESPONSIBILITY]
-**A:** [WHAT YOU DID]
-**R:** [OUTCOME]
-**Use for:** "[QUESTION_TYPE_1]", "[QUESTION_TYPE_2]"
+### Scaling a design system across 10+ sites (Systems at scale / business impact)
+**Source:** CV / LinkedIn — Lead UX/UI Designer, Catena Media → GiG
+**What happened:** Built a scalable design system that cut development time by 30% and scaled across 10+ websites in multiple markets.
+**Why it matters:** Answers "biggest impact", "working with engineering", "multi-market/multi-brand complexity".
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result: (dev time −30%; engineering overhead reduced)
 
-### 3. [PROJECT_NAME] ([SKILL_DEMONSTRATED])
-**S:** [CONTEXT]
-**T:** [YOUR RESPONSIBILITY]
-**A:** [WHAT YOU DID]
-**R:** [OUTCOME]
-**Use for:** "[QUESTION_TYPE_1]", "[QUESTION_TYPE_2]"
+### Evidence-based flagship redesign (UX impact / research-led design)
+**Source:** CV / LinkedIn — Senior UX/UI Designer, Catena Media
+**What happened:** Led the flagship product redesign; +20% mobile traffic, +15% retention; integrated UX research into the product process.
+**Why it matters:** Answers "data-informed decision", "turning research into outcomes". (Frame the product domain neutrally given the no-gambling pivot.)
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result: (+20% mobile traffic, +15% retention)
 
-<!-- Add more STAR examples as needed. Aim for 4-6 covering different competencies. -->
+### Sketch → Figma migration + shift to evidence-based design (Change management)
+**Source:** CV / LinkedIn — Catena Media
+**What happened:** Drove tooling migration and moved the team toward research/usability-led practice.
+**Why it matters:** Answers "leading change", "improving team ways of working", "overcoming resistance".
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
+### Building and leading a cross-functional team of 7 (People leadership)
+**Source:** CV / LinkedIn — Gentoo Media
+**What happened:** Led a team of seven, line-managing two team leads who each ran a sub-team.
+**Why it matters:** Answers "managing managers", "growing people", "handling performance/direction".
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
+### AI-orchestrated 0→1 internal product (AI-accelerated delivery)
+**Source:** CV / LinkedIn — Beyond Clicks Studio
+**What happened:** Designed and built an internal finance-and-operations product end-to-end, using AI to accelerate implementation.
+**Why it matters:** Answers "design-engineering boundary", "working with AI tooling", "0→1 product". (Mention **Claude Code** by name where relevant.)
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
 
 ## Common Tough Questions
 

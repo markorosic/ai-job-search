@@ -1,70 +1,121 @@
 # Search Queries for Job Scraper
 
-<!-- SETUP: Customize these queries based on your skills, target roles, and location -->
+<!-- Configured for Marko Rosic: non-EU design leader seeking in-house Head/Lead roles in the EU
+     with visa sponsorship. Industry: open, but NO gambling/betting/casino. Re-run
+     /setup --section search to adjust roles, skills, or country tiers. -->
 
 ## Search Sites
 
-Primary (Danish job market):
-- **jobindex.dk** - largest Danish job board
-- **linkedin.com/jobs** - LinkedIn job listings (filter: Denmark / your city)
-- **karriere.dk** - IDA's job board (engineering/science roles)
-- **jobfinder.dk** - another major Danish job board
-- **akademikernes.dk** - academic union job board
+The candidate is **non-EU and needs visa sponsorship**, searching across the EU. Prioritise
+boards that surface sponsorship/relocation roles, then pan-EU aggregators, then per-country boards.
 
-Secondary (company career pages via Google):
-- Direct Google searches with `site:` filters for known target companies
+**Group A — Sponsorship & relocation-focused (search these first):**
+- **eures.europa.eu** - official EU job-mobility portal (built for cross-border hiring)
+- **relocate.me** - roles bundling relocation + visa support
+- **arbeitnow.com** - visa-sponsored jobs (Germany-heavy)
+- **honeypot.io** - DE/NL tech & product, relocation-friendly
+- **landing.jobs** - Europe-wide tech & product, relocation
+- **justjoin.it** / **nofluffjobs.com** - Poland tech/product, English-first, salary-transparent, many relocation
+- **make-it-in-germany.com** - official German skilled-worker portal
+- Netherlands IND **recognized-sponsor register** - cross-check an NL employer can sponsor before applying
+
+**Group B — Pan-EU aggregators (filter by country + a sponsorship qualifier):**
+- **linkedin.com/jobs** - set location to a target country; add `("visa sponsorship" OR relocation)`
+- **indeed.com** and per-country domains (indeed.de, indeed.nl, indeed.es, indeed.it)
+- **glassdoor.com** - listings plus employer reviews
+
+**Group C — Per-country boards (when targeting a single country):**
+- Germany: **stepstone.de**, **arbeitsagentur.de**, xing.com
+- Netherlands: **nationalevacaturebank.nl**, **magnet.me**
+- Spain: **infojobs.net**, **tecnoempleo.com**
+- Italy: **infojobs.it**, monster.it
+- Poland: **pracuj.pl** · Czechia: **jobs.cz**, **startupjobs.cz**
+- Slovenia: **mojedelo.com** · Croatia: **mojposao.net** · Malta: **keepmeposted.com.mt**, **castille.com**
+
+## Target Countries (search tiers)
+
+Run **primary** countries first, then **bridge**, then **secondary**. Bridge countries are legal
+footholds that open a path to the primaries (EU Blue Card intra-EU mobility after 12 months, or
+EU Long-Term Residence after 5 years). See `EU_RELOCATION_PLAN.md` for the full rationale.
+
+- **Primary:** Germany, Netherlands
+- **Bridge:** Poland, Czechia, Slovenia, Croatia, Malta *(Malta's main pull was iGaming — weaker now given the no-gambling preference, but still viable for fintech/tech in English)*
+- **Secondary:** Spain
+- **Lowest priority:** Italy (restrictive non-EU quotas — Decreto Flussi)
 
 ## Query Categories
 
-Queries are grouped by priority. Each query should be combined with your location terms (e.g. "Copenhagen", "Sjælland", "Hovedstaden") where the site supports it.
+Two axes: **what** (role/skill, below) × **where** (country tier, above). Run primary countries
+first and **always add a sponsorship qualifier** — `("visa sponsorship" OR relocation OR "Blue Card")`.
+**Exclude gambling** where a query is broad — append `-casino -gambling -betting -igaming`.
+Language note: favour English-first roles in DE; NL is very English-friendly; English-first tech
+boards (Honeypot, Landing.jobs, NoFluffJobs) suit DE/ES/IT where local-language depth is missing.
 
-### Priority 1: [YOUR_PRIMARY_ROLE_TYPE]
+### Priority 0: Sponsorship & relocation boards (run first)
 
-These match your strongest and most desired career direction.
-
-```
-site:jobindex.dk "[YOUR_PRIMARY_JOB_TITLE]" [YOUR_CITY]
-site:jobindex.dk "[YOUR_KEY_SKILL]" [YOUR_CITY]
-site:linkedin.com/jobs "[YOUR_PRIMARY_JOB_TITLE]" [YOUR_COUNTRY]
-```
-
-### Priority 2: [YOUR_DOMAIN_EXPERTISE]
-
-These match your domain expertise.
+Hit the Group A boards directly — they pre-filter for sponsorship/relocation, so no qualifier needed.
 
 ```
-site:jobindex.dk [YOUR_DOMAIN_KEYWORD_1] [YOUR_CITY] OR [YOUR_REGION]
-site:jobindex.dk [YOUR_DOMAIN_KEYWORD_2] [YOUR_COUNTRY]
-site:linkedin.com/jobs [YOUR_DOMAIN_KEYWORD_1] [YOUR_CITY] [YOUR_COUNTRY]
+site:relocate.me "Head of Design"
+site:arbeitnow.com "design systems"
+site:justjoin.it "product designer"
+site:honeypot.io "Head of Design"
+EURES "Head of Design" (Germany OR Netherlands)
 ```
 
-### Priority 3: [YOUR_ADJACENT_ROLE_TYPE]
+### Priority 1: Design Leadership (Head / Lead, in-house)
 
-Adjacent roles you could pivot into.
-
-```
-site:jobindex.dk "[YOUR_ADJACENT_TITLE_1]" [YOUR_KEY_SKILL] [YOUR_CITY]
-site:jobindex.dk "[YOUR_ADJACENT_TITLE_2]" [YOUR_KEY_SKILL] [YOUR_CITY]
-```
-
-### Priority 4: Broader Technical / Consulting
-
-Wider net for general technical roles.
+Your primary direction — Head/Lead design roles. Run across each target country, primaries first.
 
 ```
-site:jobindex.dk [YOUR_KEY_SKILL] developer [YOUR_CITY]
-site:linkedin.com/jobs "[YOUR_KEY_SKILL] developer" [YOUR_CITY]
-site:jobindex.dk "technical consultant" [YOUR_DOMAIN] [YOUR_CITY]
+site:linkedin.com/jobs "Head of Design" Germany ("visa sponsorship" OR relocation) -gambling -casino
+site:linkedin.com/jobs "Head of UX" Netherlands "recognized sponsor"
+site:stepstone.de ("Head of Design" OR "Design Lead") English
+("Head of Design" OR "Design Lead") "design systems" "visa sponsorship" (Germany OR Netherlands) -casino -gambling -betting
 ```
 
-## Location Filter
+### Priority 2: Design Systems & DesignOps
 
-When evaluating results, verify the job location is within reasonable commute distance from your home. Define acceptable areas:
-- [YOUR_CITY] and surrounding areas
-- [ACCEPTABLE_AREA_1]
-- [ACCEPTABLE_AREA_2]
-- [BORDERLINE_AREA] (borderline - ~X min by transit)
-- [TOO_FAR_AREA] (too far)
+Your distinctive specialism — often English-first and in demand at scaling product orgs.
+
+```
+site:linkedin.com/jobs "design systems" lead (Netherlands OR Poland OR Czechia) ("visa sponsorship" OR relocation)
+site:nofluffjobs.com "design system"
+site:indeed.nl "DesignOps" English
+EURES "design systems"
+```
+
+### Priority 3: Product / UX Lead
+
+Adjacent lead roles to widen the net — include bridge countries.
+
+```
+site:linkedin.com/jobs "Lead Product Designer" "design systems" (Germany OR Netherlands OR Poland) "visa sponsorship"
+site:linkedin.com/jobs "UX Lead" "design systems" (Slovenia OR Croatia OR Czechia) -casino -gambling
+```
+
+### Priority 4: Broader / English-first remote-friendly
+
+Wider net — include EU-based remote roles as possible stepping stones.
+
+```
+site:linkedin.com/jobs ("Head of Design" OR "Design Lead") "visa sponsorship" Europe -gambling -casino
+site:landing.jobs "product designer"
+("Head of Design" OR "Design Lead") (remote OR relocation) "visa sponsorship" Europe -gambling
+site:glassdoor.com "Head of Design" (Germany OR Netherlands)
+```
+
+## Country & Relocation Filter
+
+Relocation is the **goal**, not a disqualifier — never skip a role for requiring relocation.
+Instead, rank results by country tier and sponsorship signal:
+
+- **Keep & prioritise:** roles in primary/bridge countries that mention visa sponsorship or relocation
+- **Keep & flag:** good-fit roles that are silent on sponsorship (confirm before applying)
+- **Skip:** roles that explicitly require existing EU work authorization / state "no sponsorship"
+- **Skip:** gambling / betting / casino / iGaming employers (candidate is pivoting out)
+- **Deprioritise:** Italy (restrictive non-EU quotas) and roles requiring fluent local language the
+  candidate lacks (German/Dutch/Spanish/Italian); English-workable roles rank higher
 
 ## Date Filter
 
@@ -72,5 +123,7 @@ Only include jobs posted within the last 14 days, or with an application deadlin
 
 ## Adapting Queries
 
-If the user specifies a focus area, select queries from the matching category and also generate 2-3 custom queries for that focus. For example:
-- "/scrape [focus_area]" -> relevant category queries + custom focus-specific queries
+If the user specifies a focus area or a country, select matching queries and generate 2-3 custom ones:
+- "/scrape [focus_area]" -> relevant role-category queries + custom focus-specific queries
+- "/scrape germany" (or any country) -> run all role categories scoped to that country, with the sponsorship qualifier
+- "/scrape bridge" -> scope to the bridge-country tier (Poland, Czechia, Slovenia, Croatia, Malta)

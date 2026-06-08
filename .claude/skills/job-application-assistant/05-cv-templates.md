@@ -106,11 +106,11 @@ Write 5-7 lines that function as an "elevator pitch": a concise, compelling intr
 **Create 2-3 profile statement templates for your main role types:**
 
 <!-- SETUP: These are populated based on your background -->
-**For [YOUR_PRIMARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_1]
+**For Head of Design / Head of UX roles:**
+> Product design leader with 15+ years scaling digital products at the intersection of design and engineering. I build company-level design systems that cut engineering overhead (dev time −30%, time-to-market −25%) and grow design teams that operate without hand-holding — most recently leading a cross-functional team of seven. I connect design infrastructure to business outcomes and operate comfortably at the design-engineering boundary, using AI (including Claude Code) to accelerate delivery. *[Tailor the domain/metric emphasis to the posting; lead with systems + leadership for Head roles.]*
 
-**For [YOUR_SECONDARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_2]
+**For Design Lead / Lead Product Designer roles:**
+> Lead product designer and design-systems specialist with 15+ years across high-traffic, multi-market consumer web. I build scalable design systems and drive evidence-based design (research, analytics, A/B testing) into the product process, and I close the design-engineering gap directly through functional prototypes and Figma plugins. I bring hands-on craft plus the judgment to set direction and mentor a team. *[For IC-leaning Lead roles, foreground craft + systems over people management.]*
 
 ### Core Competencies / Skills Section (Best Practice)
 Reorder and emphasize based on the role. Use bold category labels.

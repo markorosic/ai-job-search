@@ -16,9 +16,9 @@ How well do the required/preferred skills align with the candidate's capabilitie
 | 40-59 | Partial match, significant upskilling needed |
 | 0-39 | Fundamental mismatch |
 
-**Strong match areas:** [YOUR_PRIMARY_SKILLS]
-**Moderate match areas:** [YOUR_SECONDARY_SKILLS]
-**Weak match areas:** [SKILLS_YOU_LACK]
+**Strong match areas:** Design systems & DesignOps, design leadership / team management, product strategy, UX research & usability testing, interaction & visual design, design-engineering collaboration, A/B testing & analytics, Figma (+ plugin development)
+**Moderate match areas:** Front-end (HTML/CSS, JS, PHP), prototyping (Axure), AI-orchestrated delivery, roadmap & stakeholder management, 0→1 product work
+**Weak match areas:** Native-level local languages (German, Dutch, Spanish, Italian); pure IC visual/brand design with no leadership remit; non-design engineering roles
 
 ### 2. Experience Match (0-100)
 Does work history align with what they're looking for?
@@ -30,9 +30,9 @@ Does work history align with what they're looking for?
 | 40-59 | Adjacent experience, would need to make the case |
 | 0-39 | Unrelated experience |
 
-**Strong:** [YOUR_DIRECT_EXPERIENCE_DOMAINS]
-**Moderate:** [YOUR_ADJACENT_EXPERIENCE]
-**Entry-level:** [ROLES_WITH_LIMITED_EXPERIENCE]
+**Strong:** Head/Lead design roles at high-traffic, multi-brand / multi-market consumer web companies; design-system build-outs; scaling and leading design teams
+**Moderate:** Product/UX leadership in adjacent sectors (SaaS, dev-tools, fintech, media, e-commerce) — transferable, but a domain shift from affiliate media
+**Entry-level / stretch:** Very large-org VP/Director of Design; heavy research-ops or hardware/industrial-design roles
 
 ### 3. Behavioral/Culture Fit (0-100)
 Does the role and company culture match the behavioral profile?
@@ -46,14 +46,43 @@ Does the role and company culture match the behavioral profile?
 
 **Red flags to research:** Department disorganization, work dominated by maintenance over development, poor chemistry with leadership, culture mismatches. Check reviews, media coverage, LinkedIn connections, and network contacts for insider perspective.
 
-### 4. Location & Logistics (Pass/Fail + Notes)
-- Within commute range: PASS
-- Remote with occasional office: PASS
-- Requires relocation: FAIL (deal-breaker)
-- Frequent international travel: FLAG (discuss with user)
+### 4. Visa / Sponsorship Feasibility (Pass / Flag / Fail) — gating
 
-### 5. Career Alignment & Motivation (0-100)
-Does this role advance career goals and contain tasks that energize?
+The candidate is **non-EU and requires visa sponsorship**. This is the single most
+important filter: a perfect-fit role that will not sponsor is worth zero. Score the signal:
+
+- Posting explicitly offers visa sponsorship / relocation support: **PASS**
+- Employer is a known sponsor (e.g. NL IND recognized sponsor, registered DE Blue Card
+  employer, Malta iGaming/fintech): **PASS**
+- Posting is silent on sponsorship: **FLAG** — worth a pre-application email/call to ask
+- Posting requires existing EU work authorization / states "no sponsorship": **FAIL**
+
+A **FAIL** here overrides the weighted score — skip the role regardless of fit, unless the
+candidate is pursuing a self-driven route (e.g. arriving on Germany's Opportunity Card and
+applying on the ground, where the employer does not need to sponsor entry).
+
+### 5. Location & Relocation Fit (Notes + tier — not a gate)
+
+Relocation is the **goal**, not a disqualifier. Never fail a role for requiring relocation.
+Instead, note the destination's strategic tier and language realism:
+
+- **Primary (direct targets):** Germany, Netherlands — score relocation here as a strong positive.
+- **Bridge (footholds → primaries):** Malta, Slovenia, Croatia, Poland, Czechia — score as a
+  positive *stepping stone*; a bridge role that builds toward EU Blue Card intra-EU mobility
+  (12 months) or EU Long-Term Residence (5 years) is strategically valuable.
+- **Secondary:** Spain — conditional (Spanish improving).
+- **Lowest:** Italy — hardest non-EU entry (Decreto Flussi quotas).
+
+**Language realism:** discount roles requiring fluent German/Spanish/Italian; upgrade
+English-first markets (Netherlands, Malta, English-first tech boards) and Croatian/Serbian-native
+markets (Croatia, Slovenia). **Remote (EU-based employer):** note as a possible stepping stone.
+Frequent international travel: note, don't fail. See `EU_RELOCATION_PLAN.md` for full rationale.
+
+### 6. Career Alignment & Motivation (0-100)
+Does this role advance career goals and contain tasks that energize? For this candidate,
+also factor in **relocation strategic value**: a bridge-country foothold that opens a legal
+path to a primary target (via Blue Card mobility or EU Long-Term Residence) scores higher than
+an otherwise-similar role with no onward path. See the destination tiers in dimension 5.
 
 | Score | Meaning |
 |-------|---------|
@@ -63,21 +92,21 @@ Does this role advance career goals and contain tasks that energize?
 | 0-39 | Dead end or backwards step |
 
 **Career goals:**
-- [YOUR_CAREER_GOAL_1]
-- [YOUR_CAREER_GOAL_2]
-- [YOUR_CAREER_GOAL_3]
+- Return to an in-house **Head/Lead design** seat at a mature product company in the EU (relocation + visa sponsorship)
+- Own and scale design-systems and design-org infrastructure that connects to business outcomes
+- Deepen work at the design-engineering boundary with AI-accelerated delivery; pivot out of gambling/affiliate into broader product sectors
 
 **Motivation filter:** Evaluate not just whether you *can* do the tasks, but whether the tasks will *energize* you. Consider:
-- Tasks that energize: [YOUR_ENERGIZING_TASKS]
-- Tasks that drain: [YOUR_DRAINING_TASKS]
+- Tasks that energize: building design systems/infrastructure, leading & mentoring designers, problem framing, design-engineering collaboration, AI-orchestrated prototyping, evidence-based iteration
+- Tasks that drain: pure-maintenance work with no infrastructure mandate, decorative/brand-only briefs, environments that ignore research and data
 - Non-task factors: leadership style, department culture, company values, degree of autonomy
 
 **Life situation alignment:** Consider personal constraints:
-- **Security**: [YOUR_FINANCIAL_SITUATION_CONTEXT]
-- **Flexibility**: [YOUR_SCHEDULE_CONSTRAINTS]
-- **Professional development**: [YOUR_GROWTH_PRIORITIES]
+- **Security**: Needs a role that sponsors EU relocation; the stability of an in-house seat is preferred over continued independent consulting
+- **Flexibility**: Currently remote-based in Belgrade; open to relocation and to hybrid/on-site in the target country
+- **Professional development**: Growth into broader product sectors and larger design-org leadership; staying at the design + AI frontier
 
-### 6. Salary Benchmark (Optional)
+### 7. Salary Benchmark (Optional)
 
 If the salary lookup tool is configured (`salary_data.json` exists), look up the company:
 ```
@@ -111,7 +140,8 @@ Present the evaluation as:
 | Technical Skills | XX/100 | [brief note] |
 | Experience Match | XX/100 | [brief note] |
 | Behavioral Fit | XX/100 | [brief note] |
-| Location | PASS/FAIL | [brief note] |
+| Visa / Sponsorship | PASS/FLAG/FAIL | [sponsorship signal] |
+| Location & Relocation | [tier] | [destination tier + language note] |
 | Career Alignment | XX/100 | [brief note] |
 
 **Overall Score: XX/100** (weighted average of scored dimensions)
@@ -141,7 +171,8 @@ Present the evaluation as:
 - Behavioral Fit: 15%
 - Career Alignment: 30%
 
-(Location is pass/fail, not weighted)
+(Visa / Sponsorship is a gate — a FAIL overrides the weighted score. Location & Relocation is
+contextual, not weighted; it feeds Career Alignment.)
 
 ## Thresholds
 - **Strong Fit** (75+): Definitely apply, tailor everything
@@ -149,6 +180,10 @@ Present the evaluation as:
 - **Moderate Fit** (45-59): Consider carefully, discuss with user
 - **Weak Fit** (30-44): Probably skip unless strategic reasons
 - **Poor Fit** (<30): Skip
+
+**Visa gate override:** Regardless of the band above, a **FAIL** on Visa / Sponsorship
+Feasibility means skip — unless pursuing an on-the-ground route (e.g. Germany Opportunity Card).
+A **FLAG** means apply, but prioritize confirming sponsorship early (pre-application call/email).
 
 ## Pre-Application: Call the Employer (Best Practice)
 

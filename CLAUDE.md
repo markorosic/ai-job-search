@@ -1,10 +1,9 @@
-# Job Application Assistant for [YOUR_NAME]
+# Job Application Assistant for Marko Rosic
 
-<!-- SETUP: This file is populated by running /setup -->
-<!-- After running /setup, all [PLACEHOLDER] tokens will be replaced with your actual information -->
+<!-- Profile populated via /setup (2026-06-05). Re-run /setup or /setup --section <name> to update. -->
 
 ## Role
-This repo is a job application workspace. Claude acts as a career advisor and application assistant for [YOUR_NAME], helping with:
+This repo is a job application workspace. Claude acts as a career advisor and application assistant for Marko Rosic, helping with:
 1. **Job fit evaluation** - Assess job postings against your profile (skills, experience, behavioral traits)
 2. **CV tailoring** - Adapt existing CV templates (LaTeX/moderncv) to target specific roles
 3. **Cover letter writing** - Draft targeted cover letters using existing templates (LaTeX)
@@ -16,65 +15,75 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 <!-- This section is auto-populated by /setup. You can also fill it in manually. -->
 
 ### Identity
-- **Name:** [YOUR_NAME]
-- **Location:** [YOUR_CITY], [YOUR_COUNTRY] ([YOUR_COMMUTE_CONSTRAINTS])
-- **Languages:** [YOUR_LANGUAGES]
-- **Status:** [YOUR_EMPLOYMENT_STATUS]
-- **LinkedIn headline:** "[YOUR_LINKEDIN_HEADLINE]"
+- **Name:** Marko Rosic
+- **Location:** Belgrade, Serbia (open to EU relocation)
+- **Contact:** marko@rosic.net · +381 60 585 44 55 · portfolio: rosic.net
+- **Languages:** English (fluent / professional), Serbian (native), French (intermediate)
+- **Status:** Serbian citizen — **requires EU visa sponsorship (non-EU)**. Currently an independent design-leadership consultant; actively seeking an in-house Head/Lead design role in the EU.
+- **LinkedIn headline:** "Head of Design | Design Systems | Product Strategy"
 
 ### Education
 <!-- List your degrees, most recent first -->
-- **[DEGREE_LEVEL] in [FIELD]** ([YEAR_START]-[YEAR_END]) - [INSTITUTION]
-  - Thesis: "[THESIS_TITLE]"
-  - Topics: [KEY_TOPICS]
+- **BA in Economics** (2002-2008) - Faculty for Business Studies, Megatrend University, Belgrade
+- **Industrial Design Technician** (1995-1999) - School for Design, Belgrade
 
 ### Professional Experience
 <!-- List your roles, most recent first -->
-- **[JOB_TITLE]** ([START_DATE] - [END_DATE]) - **[COMPANY]** ([LOCATION])
-  - [KEY_RESPONSIBILITY_1]
-  - [KEY_RESPONSIBILITY_2]
-  - [KEY_ACHIEVEMENT]
+- **Design Leadership Consultant** (May 2025 - Present) - **Beyond Clicks Studio** (Independent, Belgrade — remote)
+  - Senior design lead across concurrent engagements: design systems, product strategy, design-engineering workflow
+  - AI-orchestrated product & tooling work; builds functional prototypes and Figma plugins
+- **Head of UX/UI** (Jul 2024 - May 2025) - **Gentoo Media** (Belgrade)
+  - Built a company-level design system across multi-brand products; led a cross-functional team of 7 (incl. 2 team leads); cut feature time-to-market by 25%
+- **Lead UX/UI Designer** (May 2021 - Jul 2024) - **Catena Media** (acquired by Gaming Innovation Group, 2023) (Belgrade)
+  - Directed end-to-end UX for high-traffic, multi-market consumer web; built a design system that cut dev time 30%
+- **Senior UX/UI Designer** (Oct 2018 - May 2021) - **Catena Media** (Belgrade)
+  - Led flagship redesign (+20% mobile traffic, +15% retention); drove Sketch→Figma migration; shifted team to evidence-based design
+- **Interaction Designer** (Dec 2013 - Oct 2018) - **Smith Micro Software** (Belgrade)
+  - UX for carrier-branded Android apps (Sprint, T-Mobile); backend/device-management tooling
+- *Earlier:* UI Designer (MySkin / youngculture, 2009-13); Co-founder & CEO (Mainstream ISP, 2005-08); web design/dev (2000-05)
 
 ### Technical Skills
-- **Primary:** [YOUR_PRIMARY_SKILLS]
-- **Secondary:** [YOUR_SECONDARY_SKILLS]
-- **Domain:** [YOUR_DOMAIN_EXPERTISE]
-- **Software:** [YOUR_TOOLS_AND_SOFTWARE]
+- **Primary:** Design systems (token architecture, multi-brand component libraries), DesignOps, product strategy, design-team leadership & mentoring, UX research & usability testing
+- **Secondary:** Interaction & visual design, conversion / A-B testing & analytics (GA, VWO, HotJar), roadmap & stakeholder management, AI-orchestrated product/tooling delivery
+- **Domain:** High-traffic, multi-market / multi-brand consumer web products; the design-engineering boundary
+- **Software:** Figma (+ plugin development), Axure RP, HTML/CSS, PHP, JavaScript; Jira, Asana, Linear, Notion
 
 ### Certifications
 <!-- List relevant certifications with dates -->
-- **[CERTIFICATION_NAME]** - [HOURS]h - completed [DATE]
+- **User Research — Methods and Best Practices** - Interaction Design Foundation - completed Jul 2017
 
 ### Publications
 <!-- List peer-reviewed publications, if any -->
-- [AUTHOR_LIST] ([YEAR]). [TITLE]. [JOURNAL].
+- None (design / leadership career) - see portfolio at rosic.net
 
 ### Awards
 <!-- List relevant awards, hackathons, competitions -->
-- [AWARD_NAME] - [EVENT] ([YEAR])
+- **Best of Swiss Apps - Gold (Entertainment)** - Swisscom TV Android tablet app (2013)
 
 ### Behavioral Profile
 <!-- Your behavioral assessment results (PI, DISC, Myers-Briggs, or self-assessment) -->
-- **[TRAIT_1]** - [DESCRIPTION]
-- **[TRAIT_2]** - [DESCRIPTION]
-- **Strengths:** [YOUR_STRENGTHS]
-- **Growth areas:** [YOUR_GROWTH_AREAS]
-- **Thrives in:** [YOUR_IDEAL_ENVIRONMENT]
+- **Systematic & infrastructure-minded** - frames the right problems early, builds systems (design systems, processes) that hold up and scale *[inferred from LinkedIn About]*
+- **Evidence-based** - drives decisions with research, analytics, and A/B testing *[inferred from LinkedIn About]*
+- **Strengths:** analytical, dependable, high initiative, combined design + business perspective, collaborative team-builder *[inferred from reference letter]*
+- **Growth areas:** pivoting out of a single domain (iGaming / affiliate) into broader product sectors; building local-language depth for some EU markets
+- **Thrives in:** mature product orgs where design infrastructure is connected to business outcomes; autonomy plus close cross-functional work with engineering
 
 ### What Excites You
 <!-- What motivates you professionally -->
-- [PASSION_1]
-- [PASSION_2]
+- Building design systems and design-org infrastructure that scale across markets
+- Working at the design-engineering boundary, using AI (e.g. **Claude Code**) to accelerate delivery
 
 ### Target Sectors
 <!-- Industries and companies you're targeting -->
-- [SECTOR_1]: [EXAMPLE_COMPANIES]
-- [SECTOR_2]: [EXAMPLE_COMPANIES]
+- Product / SaaS & developer tools: workflow-automation, dev-platform, and product companies (non-gambling)
+- Fintech, media / streaming, e-commerce / marketplaces — any mature product org with real design infrastructure
+- Geographic focus: EU, primarily Germany & Netherlands; Poland / Czechia as bridges (relocation + visa sponsorship required)
 
 ### Deal-breakers
 <!-- Hard constraints on job search -->
-- [DEALBREAKER_1]
-- [DEALBREAKER_2]
+- **Gambling / betting / casino industry** — pivoting out, despite prior iGaming-affiliate experience
+- Roles with **no visa sponsorship** / requiring existing EU work authorization
+- Pure-maintenance roles with no mandate to build design infrastructure or lead
 
 ## Repo Structure
 - `cv/` - LaTeX CV variants (moderncv template, banking style)

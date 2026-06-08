@@ -1,8 +1,7 @@
-%% Example CV - [YOUR_NAME]
+%% Master CV - Marko Rosic
 %% Comprehensive overview of all competencies, experience, and achievements.
-%% Use as a master reference when tailoring role-specific CVs.
+%% Use as a master reference when tailoring role-specific CVs (cv/main_<company>.tex).
 %%
-%% SETUP: Run /setup to populate this with your actual information.
 %% Compile with: lualatex main_example.tex
 %% (pdflatex often fails on modern MiKTeX with fontawesome5 font-expansion errors.)
 
@@ -18,24 +17,25 @@
 \renewcommand*{\sectionstyle}[1]{{\sectionfont\color{color1}#1}}
 
 \usepackage[utf8]{inputenc}
+\usepackage{needspace}
 \usepackage{hyperref}
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
     filecolor=magenta,
     urlcolor=blue,
-    pdftitle={[YOUR_NAME] - CV},
+    pdftitle={Marko Rosic - CV},
     pdfpagemode=FullScreen,
 }
 \usepackage[scale=0.80]{geometry}
 \usepackage{import}
 
 % personal data
-\name{[First]}{[Last]}
-\address{[Your Address, City, Country]}{}{}
-\phone[mobile]{[+XX XXXXXXXXXX]}
-\email{[your.email@example.com]}
-\extrainfo{\href{[https://linkedin.com/in/your-profile]}{LinkedIn}, \href{[https://github.com/your-username]}{GitHub}}
+\name{Marko}{Rosic}
+\address{Belgrade, Serbia}{}{}
+\phone[mobile]{+381 60 585 44 55}
+\email{marko@rosic.net}
+\extrainfo{\href{https://rosic.net}{rosic.net}, \href{https://linkedin.com/in/markorosic}{LinkedIn}}
 
 \begin{document}
 
@@ -46,7 +46,7 @@
 % ============================================================
 
 \vspace{6pt}
-\small{[Write a 3-5 line profile statement tailored to the role you're applying for. Focus on what makes you uniquely qualified. Example: "Data scientist with a PhD in [field] and X years of industry experience. Combines deep domain expertise in [domain] with strong applied machine learning and Python development skills. Experienced in developing end-to-end ML pipelines, from data ingestion to stakeholder-facing dashboards."]}
+\small{Product design leader with 15+ years building and scaling digital products at the intersection of design and engineering. I build design systems that cut engineering overhead and grow design teams that operate without hand-holding. I am fluent with technical teams: I assess implementation complexity, contribute to roadmaps, and build functional prototypes, tooling, and Figma plugins. My recent work centres on AI-orchestrated product design, using AI (including Claude Code) to accelerate delivery while owning the problem, the UX, and the research direction.}
 
 % ============================================================
 %     CORE COMPETENCIES
@@ -56,15 +56,15 @@
 \vspace{1pt}
 \begin{itemize}
 
-\item \textbf{[Skill Category 1]}: [Specific skills, frameworks, tools. Be concrete.]
+\item \textbf{Design Systems \& DesignOps}: token architecture, multi-brand component libraries, accessibility, design-to-development handoff
 
-\item \textbf{[Skill Category 2]}: [Specific skills, frameworks, tools.]
+\item \textbf{Design Leadership}: built and led cross-functional teams of up to 7 (incl. two team leads); mentoring, hiring, performance, growth
 
-\item \textbf{[Skill Category 3]}: [Specific skills, frameworks, tools.]
+\item \textbf{Product Strategy \& Research}: problem framing, roadmap input, UX research \& usability testing (UserZoom, Optimal Workshop, UXtweak, HotJar)
 
-\item \textbf{[Skill Category 4]}: [Domain expertise, methods, approaches.]
+\item \textbf{Conversion \& Analytics}: A/B testing, Google Analytics, VWO, HotJar; metric-driven iteration
 
-\item \textbf{[Skill Category 5]}: [Tools, platforms, software.]
+\item \textbf{Technical \& AI-orchestrated delivery}: HTML/CSS, PHP, JavaScript, Figma plugin development, prototyping (Axure RP, HTML/JS), AI-accelerated delivery (Claude Code)
 
 \end{itemize}
 
@@ -76,32 +76,60 @@
 \vspace{3pt}
 \begin{itemize}
 
-% --- Most Recent Role ---
-\item{\cventry{[YYYY--Present]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+\needspace{5\baselineskip}
+\item{\cventry{2025--Present}{Design Leadership Consultant}{Beyond Clicks Studio (Independent)}{Belgrade, Serbia (Remote)}{}{\vspace{1pt}
 \begin{itemize}
-    \item [Achievement or responsibility 1 - be specific, use numbers where possible]
-    \item [Achievement or responsibility 2]
-    \item [Achievement or responsibility 3]
-    \item [Achievement or responsibility 4]
+    \item Senior design lead across multiple concurrent engagements: design systems, product strategy, and the design-engineering workflow
+    \item Lead multi-brand design-system and product UX for an international media group: token architecture, component conventions, accessibility, handoff
+    \item Direct AI-orchestrated product and tooling work; designed and built an internal finance-and-operations product end-to-end using AI to accelerate delivery
+    \item Build functional prototypes and Figma plugins to close the gap between design intent and engineering delivery
 \end{itemize}}}
 
 \vspace{3pt}
 
-% --- Previous Role ---
-\item{\cventry{[YYYY--YYYY]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+\needspace{5\baselineskip}
+\item{\cventry{2024--2025}{Head of UX/UI}{Gentoo Media}{Belgrade, Serbia}{}{\vspace{1pt}
 \begin{itemize}
-    \item [Achievement or responsibility 1]
-    \item [Achievement or responsibility 2]
-    \item [Achievement or responsibility 3]
+    \item Established and maintained a company-level design system ensuring consistency across multi-brand products
+    \item Led a cross-functional design team of seven, line-managing two team leads who each ran their own sub-team
+    \item Introduced UX best practices that reduced time-to-market for new features by 25\%
+    \item Used analytics and user-feedback loops to continuously iterate on product experience
 \end{itemize}}}
 
 \vspace{3pt}
 
-% --- Earlier Role ---
-\item{\cventry{[YYYY--YYYY]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+\needspace{5\baselineskip}
+\item{\cventry{2021--2024}{Lead UX/UI Designer}{Catena Media (acquired by Gaming Innovation Group)}{Belgrade, Serbia}{}{\vspace{1pt}
 \begin{itemize}
-    \item [Achievement or responsibility 1]
-    \item [Achievement or responsibility 2]
+    \item Directed end-to-end UX for high-traffic, multi-market consumer web products using user-centred methods
+    \item Built a scalable design system that reduced development time by 30\% and scaled across 10+ websites
+    \item Facilitated stakeholder workshops to align design decisions with business objectives; mentored designers
+\end{itemize}}}
+
+\vspace{3pt}
+
+\needspace{5\baselineskip}
+\item{\cventry{2018--2021}{Senior UX/UI Designer}{Catena Media}{Belgrade, Serbia}{}{\vspace{1pt}
+\begin{itemize}
+    \item Led a flagship product redesign, driving +20\% mobile traffic and +15\% user retention
+    \item Integrated UX research into the product process; drove the Sketch-to-Figma migration; completed Catena Leadership Academy
+\end{itemize}}}
+
+\vspace{3pt}
+
+\needspace{5\baselineskip}
+\item{\cventry{2013--2018}{Interaction Designer}{Smith Micro Software, Inc.}{Belgrade, Serbia}{}{\vspace{1pt}
+\begin{itemize}
+    \item Designed UX for carrier-branded Android apps shipped with Sprint and T-Mobile devices
+    \item Designed backend tooling for device management and an IoT location-based notification system
+\end{itemize}}}
+
+\vspace{3pt}
+
+\needspace{4\baselineskip}
+\item{\cventry{2000--2013}{Earlier roles}{UI Designer; Co-founder \& CEO; Web Designer/Developer}{Belgrade, Serbia}{}{\vspace{1pt}
+\begin{itemize}
+    \item UI Designer at MySkin / youngculture (Swisscom TV app); Co-founder \& CEO of Mainstream (dial-up ISP); freelance web design \& development
 \end{itemize}}}
 
 \end{itemize}
@@ -114,15 +142,11 @@
 \vspace{1pt}
 \begin{itemize}
 
-\item{\cventry{[YYYY--YYYY]}{[Degree] in [Field]}{[Institution]}{[City, Country]}{}{\vspace{1pt}
-Thesis: ``[Thesis Title].'' [Brief description of research focus.]
-}}
+\item{\cventry{2002--2008}{BA in Economics}{Faculty for Business Studies, Megatrend University}{Belgrade, Serbia}{}{}}
 
 \vspace{3pt}
 
-\item{\cventry{[YYYY--YYYY]}{[Degree] in [Field]}{[Institution]}{[City, Country]}{}{\vspace{1pt}
-[Brief description or key topics.]
-}}
+\item{\cventry{1995--1999}{Industrial Design Technician}{School for Design}{Belgrade, Serbia}{}{}}
 
 \end{itemize}
 
@@ -133,27 +157,17 @@ Thesis: ``[Thesis Title].'' [Brief description of research focus.]
 \section{Languages}
 \vspace{1pt}
 \begin{itemize}
-\item [Language 1] (native), [Language 2] (fluent), [Language 3] (intermediate).
+\item English (fluent / professional), Serbian (native), French (intermediate).
 \end{itemize}
 
 % ============================================================
-%     PUBLICATIONS (optional)
-% ============================================================
-
-\section{Publications}
-\vspace{1pt}
-\begin{itemize}
-\item [Author(s)] ([Year]). [Title]. [Journal/Conference]. \href{[DOI_URL]}{DOI link}
-\end{itemize}
-
-% ============================================================
-%     HONORS AND AWARDS (optional)
+%     HONORS AND AWARDS
 % ============================================================
 
 \section{Honors and Awards}
 \vspace{1pt}
 \begin{itemize}
-\item{\textbf{[Award Name]} -- [Event/Organization] ([Year]).}
+\item{\textbf{Best of Swiss Apps -- Gold (Entertainment)} -- Swisscom TV Android tablet app (2013).}
 \end{itemize}
 
 % ============================================================

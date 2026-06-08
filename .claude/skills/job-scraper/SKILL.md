@@ -1,14 +1,14 @@
 # Job Scraper
 
 **name:** job-scraper
-**description:** Scrapes Danish job sites for new positions matching your profile. Deduplicates across runs. Triggers on: job scrape, find jobs, search jobs, new jobs, job search, scrape jobs, /scrape
+**description:** Scrapes EU job sites for new positions matching your profile. Deduplicates across runs. Triggers on: job scrape, find jobs, search jobs, new jobs, job search, scrape jobs, /scrape
 **allowed-tools:** Read, Write, Edit, Glob, Grep, WebFetch, WebSearch, Agent, AskUserQuestion
 
 ---
 
 ## How It Works
 
-This skill searches multiple Danish job sites using targeted queries based on your profile, deduplicates against previously seen jobs and the application tracker, and presents new matches with a quick fit assessment.
+This skill searches multiple EU job sites using targeted queries based on your profile, deduplicates against previously seen jobs and the application tracker, and presents new matches with a quick fit assessment.
 
 ## Invocation
 
@@ -39,8 +39,8 @@ Run **WebSearch** queries from `search-queries.md`. By default, run the top 3 pr
 If the user specified a focus area (e.g. "data science"), prioritize queries from that category.
 
 For each search:
-- Use `WebSearch` with site-specific queries (jobindex.dk, linkedin.com/jobs, karriere.dk, etc.)
-- Target your configured geographic area
+- Use `WebSearch` with the boards in `search-queries.md` (EURES, LinkedIn, Relocate.me, Arbeitnow, StepStone, etc.) — run the sponsorship/relocation boards (Priority 0) first
+- Target your configured countries (primaries first, then bridges) and add a sponsorship qualifier, e.g. `("visa sponsorship" OR relocation)`
 - Look for postings from the last 14 days
 
 ### Step 2: Fetch & Parse
@@ -58,6 +58,9 @@ For each new job, do a rapid fit check (NOT the full evaluation from `04-job-eva
 - **High match**: Role directly involves your core skills
 - **Medium match**: Role is adjacent to your experience
 - **Low match**: Role requires significant skills you lack
+
+Also capture the **sponsorship signal** (the gating filter from `04-job-evaluation.md`):
+✅ offers visa sponsorship / relocation · ⚠️ silent (confirm before applying) · ❌ requires existing EU work authorization.
 
 ### Step 4: Deduplicate & Store
 
@@ -87,9 +90,9 @@ Present new jobs in a table sorted by fit (high first):
 
 Found X new positions (Y high, Z medium, W low match).
 
-| # | Fit | Title | Company | Location | Deadline | URL |
-|---|-----|-------|---------|----------|----------|-----|
-| 1 | High | ... | ... | ... | ... | [Link](...) |
+| # | Fit | Visa | Title | Company | Location | Deadline | URL |
+|---|-----|------|-------|---------|----------|----------|-----|
+| 1 | High | ✅ | ... | ... | ... | ... | [Link](...) |
 
 ### High-Match Highlights
 For each high-match job, add 2-3 bullet points:
@@ -113,7 +116,7 @@ If the user decides to apply to any job, add a row to `job_search_tracker.csv`.
 
 1. **Never fabricate job postings.** Only present jobs found via actual WebSearch/WebFetch results.
 2. **Respect deduplication.** Always check seen_jobs.json AND job_search_tracker.csv before presenting.
-3. **Focus on configured geographic area.** Skip jobs that require relocation or are clearly outside commute range.
+3. **Relocation is the goal, not a filter.** Focus on the configured target countries (primaries first, then bridges). Do NOT skip roles for requiring relocation; skip only roles that explicitly require existing EU work authorization or state "no sponsorship".
 4. **Only open positions.** Skip postings with expired deadlines or those marked as closed.
 5. **Be efficient with WebFetch.** Don't fetch every search result - use titles and snippets to pre-filter before fetching.
 6. **Parallel searches.** Use the Agent tool or parallel WebSearch calls to speed up the search phase.
