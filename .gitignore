@@ -42,6 +42,12 @@ Thumbs.db
 # Memory files (Claude Code user-specific)
 .claude/projects/
 
+# Local Claude settings (machine-specific permission grants)
+.claude/settings.local.json
+
+# Playwright MCP session artifacts
+.playwright-mcp/
+
 # Skills lock (auto-generated)
 skills-lock.json
 
