@@ -1,5 +1,4 @@
-export const LISTING_URL = "https://nofluffjobs.com/api/posting"
-export const DETAIL_URL = "https://nofluffjobs.com/api/posting"
+export const BASE_URL = "https://nofluffjobs.com/api/posting"
 
 export function writeError(error: string, code: string): void {
   process.stderr.write(JSON.stringify({ error, code }) + "\n")
@@ -45,7 +44,6 @@ export interface NoFluffJob {
   regions: string[]
   salary: NoFluffJobSalary | null
   location: NoFluffJobLocation
-  fullyRemote: boolean
   posted: number
   url: string
 }

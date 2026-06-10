@@ -3,12 +3,11 @@ name: nofluffjobs-search
 version: 1.0.0
 description: >
   Use this skill when the user wants to search for tech/product jobs in Poland,
-  Czechia, or the Netherlands with transparent salary data. NoFluffJobs covers
+  Czechia, Hungary, or Slovakia with transparent salary data. NoFluffJobs covers
   software, data, design, devops, and management roles — all listings include
-  salary ranges. Trigger phrases: nofluffjobs, poland jobs, czechia jobs, tech jobs
-  poland, design jobs poland, ux poland, product designer poland, head of design
-  poland, design systems poland, nl tech jobs, netherlands product jobs,
-  salary range jobs, transparent salary europe.
+  salary ranges. Trigger phrases: nofluffjobs, poland jobs, czechia jobs, hungary jobs,
+  slovakia jobs, tech jobs poland, design jobs poland, ux poland, product designer poland,
+  head of design poland, design systems poland, salary range jobs, transparent salary europe.
 context: fork
 allowed-tools: Bash(bun run skills/nofluffjobs-search/cli/src/cli.ts *)
 ---

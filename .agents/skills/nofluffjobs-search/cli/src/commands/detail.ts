@@ -1,6 +1,6 @@
 import { defineCommand, option } from "@bunli/core"
 import { z } from "zod"
-import { fetchJson, writeError, jobUrl, DETAIL_URL } from "../helpers.js"
+import { fetchJson, writeError, jobUrl, BASE_URL } from "../helpers.js"
 
 interface SkillItem {
   value: string
@@ -34,14 +34,14 @@ export const detail = defineCommand({
       description: "Output format",
     }),
   },
-  handler: async ({ flags, positional }) => {
-    const slug = positional[0]
+  handler: async ({ flags, positionals }) => {
+    const slug = positionals[0]
     if (!slug) {
       writeError("slug argument required", "MISSING_SLUG")
       process.exit(1)
     }
     try {
-      const data = await fetchJson<DetailPosting>(`${DETAIL_URL}/${slug}`)
+      const data = await fetchJson<DetailPosting>(`${BASE_URL}/${slug}`)
 
       if (flags.format === "json") {
         console.log(JSON.stringify(data, null, 2))
@@ -51,7 +51,7 @@ export const detail = defineCommand({
       const salary = data.salary
         ? `${Math.round(data.salary.from).toLocaleString()}–${Math.round(data.salary.to).toLocaleString()} ${data.salary.currency} (${data.salary.type})`
         : "not disclosed"
-      const cities = (data.location?.places ?? []).map(p => `${p.city} (${p.country.code})`).join(", ")
+      const cities = (data.location?.places ?? []).map(p => p.country ? `${p.city} (${p.country.code})` : p.city).join(", ")
       const remote = data.location?.fullyRemote ? "yes" : "no"
 
       console.log(`${data.title}`)

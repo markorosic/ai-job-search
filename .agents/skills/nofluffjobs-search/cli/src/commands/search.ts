@@ -8,7 +8,7 @@ import {
   jobUrl,
   type NoFluffJob,
   type NoFluffListingResponse,
-  LISTING_URL,
+  BASE_URL,
 } from "../helpers.js"
 
 function formatSalary(job: NoFluffJob): string {
@@ -61,7 +61,7 @@ export const search = defineCommand({
   },
   handler: async ({ flags }) => {
     try {
-      const data = await fetchJson<NoFluffListingResponse>(LISTING_URL)
+      const data = await fetchJson<NoFluffListingResponse>(BASE_URL)
       const unique = deduplicatePostings(data.postings ?? [])
 
       const regions = flags.region ?? []
