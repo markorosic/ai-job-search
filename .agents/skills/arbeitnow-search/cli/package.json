@@ -1,0 +1,21 @@
+{
+  "name": "arbeitnow-cli",
+  "version": "1.0.0",
+  "description": "CLI for Arbeitnow job board API",
+  "type": "module",
+  "main": "src/cli.ts",
+  "scripts": {
+    "start": "bun run src/cli.ts",
+    "test": "bun test --timeout 30000",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@bunli/core": "latest",
+    "node-html-parser": "^6.1.13",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.4.0"
+  }
+}
