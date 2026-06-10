@@ -13,7 +13,7 @@ boards that surface sponsorship/relocation roles, then pan-EU aggregators, then 
 - **eures.europa.eu** - official EU job-mobility portal (built for cross-border hiring)
 - **relocate.me** - roles bundling relocation + visa support
 - **arbeitnow.com** - visa-sponsored jobs (Germany-heavy)
-- **honeypot.io** - DE/NL tech & product, relocation-friendly
+- ~~honeypot.io~~ — shut down January 2025, no longer available
 - **landing.jobs** - Europe-wide tech & product, relocation
 - **justjoin.it** / **nofluffjobs.com** - Poland tech/product, English-first, salary-transparent, many relocation
 - **make-it-in-germany.com** - official German skilled-worker portal
@@ -83,7 +83,6 @@ Hit the Group A boards directly — they pre-filter for sponsorship/relocation, 
 site:relocate.me "Head of Design"
 site:arbeitnow.com "design systems"
 site:justjoin.it "product designer"
-site:honeypot.io "Head of Design"
 EURES "Head of Design" (Germany OR Netherlands)
 ```
 

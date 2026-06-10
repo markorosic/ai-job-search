@@ -34,14 +34,26 @@ Optional arguments:
 
 ### Step 1: Search
 
-Run **WebSearch** queries from `search-queries.md`. By default, run the top 3 priority categories. If the user said "broad", run all categories.
+Run searches across all available tools in priority order. By default, cover Priority 0–2 categories from `search-queries.md`. If the user said "broad", run all categories.
 
-If the user specified a focus area (e.g. "data science"), prioritize queries from that category.
+#### Step 1a: CLI tools (structured APIs — run in parallel)
 
-For each search:
-- Use `WebSearch` with the boards in `search-queries.md` (EURES, LinkedIn, Relocate.me, Arbeitnow, StepStone, etc.) — run the sponsorship/relocation boards (Priority 0) first
-- Target your configured countries (primaries first, then bridges) and add a sponsorship qualifier, e.g. `("visa sponsorship" OR relocation)`
-- Look for postings from the last 14 days
+Use the Agent tool to run these in parallel:
+
+- **arbeitnow-search**: `bun run .agents/skills/arbeitnow-search/cli/src/cli.ts search --visa --location Germany --limit 20 --format json` (and a second call with `--location Netherlands`)
+- **nofluffjobs-search**: `bun run .agents/skills/nofluffjobs-search/cli/src/cli.ts search --region pl --region cz --category ux --format json`
+- **eures-search**: `bun run .agents/skills/eures-search/cli/src/cli.ts search --countries de --countries nl --countries pl --countries cz --keywords "Head of Design" --limit 20 --format json` (and a second call with `--keywords "design systems"`)
+- **justjoin-search**: skip — API endpoint unavailable (stub only)
+
+Adjust keywords to match the current search category and user focus area.
+
+#### Step 1b: LinkedIn agent
+
+Invoke the `linkedin-jobs` agent. Pass the target role keywords and countries from `search-queries.md` Priority 1 and 2 categories.
+
+#### Step 1c: WebSearch fallback agent
+
+Invoke the `websearch-jobs` agent. Pass the current search category and target countries. This covers StepStone, Indeed, and Glassdoor.
 
 ### Step 2: Fetch & Parse
 
