@@ -46,7 +46,7 @@ export const search = defineCommand({
       }
 
       if (flags.format === "table") {
-        console.log(`Found ${jobs.length} jobs (page ${data.meta.current_page} of ${Math.ceil(data.meta.from / data.meta.per_page) || "?"})`)
+        console.log(`Found ${jobs.length} jobs (page ${data.meta.current_page})`)
         formatTable(jobs)
       } else if (flags.format === "plain") {
         for (const j of jobs) {

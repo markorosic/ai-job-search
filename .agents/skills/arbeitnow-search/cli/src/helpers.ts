@@ -19,12 +19,12 @@ export function stripHtml(html: string): string {
 }
 
 export async function fetchJson<T>(url: string, init?: RequestInit): Promise<T> {
-  const maxRetries = 3
+  const maxAttempts = 4
   let delay = 500
-  for (let attempt = 0; attempt <= maxRetries; attempt++) {
+  for (let attempt = 0; attempt < maxAttempts; attempt++) {
     const response = await fetch(url, init)
     if (response.status === 429 || response.status >= 500) {
-      if (attempt === maxRetries) throw new Error(`Request failed: ${response.status} ${response.statusText}`)
+      if (attempt === maxAttempts - 1) throw new Error(`Request failed: ${response.status} ${response.statusText}`)
       await new Promise(r => setTimeout(r, delay + Math.floor(Math.random() * 500)))
       delay = Math.min(delay * 2, 5000)
       continue
@@ -36,14 +36,14 @@ export async function fetchJson<T>(url: string, init?: RequestInit): Promise<T> 
 }
 
 export async function fetchHtml(url: string): Promise<string> {
-  const maxRetries = 3
+  const maxAttempts = 4
   let delay = 500
-  for (let attempt = 0; attempt <= maxRetries; attempt++) {
+  for (let attempt = 0; attempt < maxAttempts; attempt++) {
     const response = await fetch(url, {
       headers: { "User-Agent": "Mozilla/5.0 (compatible; arbeitnow-cli/1.0)" },
     })
     if (response.status === 429 || response.status >= 500) {
-      if (attempt === maxRetries) throw new Error(`Request failed: ${response.status}`)
+      if (attempt === maxAttempts - 1) throw new Error(`Request failed: ${response.status}`)
       await new Promise(r => setTimeout(r, delay + Math.floor(Math.random() * 500)))
       delay = Math.min(delay * 2, 5000)
       continue

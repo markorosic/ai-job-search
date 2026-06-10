@@ -12,11 +12,12 @@ describe("arbeitnow-search search", () => {
 
   it("returns only visa-sponsored jobs when --visa is set", async () => {
     const result = await runCLI(["search", "--visa", "--limit", "5", "--format", "json"])
+    expect(result.exitCode).toBe(0)
     const data = parseJSON<{ results: ArbeitnowJob[] }>(result)
-    // The API may not tag visa_sponsorship on individual job objects even when filtering by it,
-    // or may return 0 results when no sponsored jobs are live. Both are valid.
     expect(Array.isArray(data.results)).toBe(true)
-    expect(data.results.every(j => j.visa_sponsorship === true || j.visa_sponsorship == null)).toBe(true)
+    if (data.results.length > 0) {
+      expect(data.results.every(j => j.visa_sponsorship === true || j.visa_sponsorship == null)).toBe(true)
+    }
   })
 
   it("filters by location client-side", async () => {
