@@ -20,7 +20,7 @@ boards that surface sponsorship/relocation roles, then pan-EU aggregators, then 
 - Netherlands IND **recognized-sponsor register** - cross-check an NL employer can sponsor before applying
 
 **Group B — Pan-EU aggregators (filter by country + a sponsorship qualifier):**
-- **linkedin.com/jobs** - set location to a target country; add `("visa sponsorship" OR relocation)`
+- **linkedin.com/jobs** - use the **guest job-search endpoint** (no login) — see "LinkedIn guest job-search" below. Do NOT use a logged-in LinkedIn scraper/MCP (personal-account ban risk).
 - **indeed.com** and per-country domains (indeed.de, indeed.nl, indeed.es, indeed.it)
 - **glassdoor.com** - listings plus employer reviews
 
@@ -31,6 +31,30 @@ boards that surface sponsorship/relocation roles, then pan-EU aggregators, then 
 - Italy: **infojobs.it**, monster.it
 - Poland: **pracuj.pl** · Czechia: **jobs.cz**, **startupjobs.cz**
 - Slovenia: **mojedelo.com** · Croatia: **mojposao.net** · Malta: **keepmeposted.com.mt**, **castille.com**
+
+## LinkedIn guest job-search (unauthenticated — preferred for LinkedIn)
+
+LinkedIn job *search* is normally login-gated, but the **guest endpoint** that powers the
+logged-out page is open and returns job cards with no account attached — so the worst case is an
+IP rate-limit, never a ban on a personal profile. This is exactly why we do NOT add a logged-in
+LinkedIn scraper / MCP: it decouples discovery from the candidate's account.
+
+**Two-step flow (uses WebFetch only — no new dependency):**
+
+1. **Discover** — `WebFetch` the guest search endpoint (~10 cards/page: title, company, location, link, age):
+
+   `https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=<url-encoded>&location=<country|city>&f_TPR=r1209600&start=0`
+
+2. **Detail** — `WebFetch` the public posting page `https://www.linkedin.com/jobs/view/<id>/` for the full description.
+
+**Useful filter params** (append to the discover URL):
+- `f_TPR=r604800` posted last 7 days · `r1209600` last 14 days
+- `f_WT=1` on-site · `2` remote · `3` hybrid · `f_E=` seniority · `f_JT=` job type
+- `start=0,10,20,...` pagination (~10 results per page)
+
+**Caveats:** undocumented endpoint (may change); keep volume modest to avoid HTTP 429; it does
+NOT surface the visa/sponsorship signal — pair with the Group A sponsor boards. For a fully
+legitimate structured DE source, arbeitnow has a public JSON API: `https://www.arbeitnow.com/api/job-board-api`.
 
 ## Target Countries (search tiers)
 

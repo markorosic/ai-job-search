@@ -19,6 +19,33 @@
 - **First person, active voice.** "I built" not "a system was developed by the candidate."
 - **Demonstrate, don't state.** Instead of "I am a team player", write a specific example of teamwork and its outcome.
 
+## Plain Voice (Marko's voice)
+
+Marko is a non-native English speaker (Serbian / Serbo-Croatian first language). He writes and speaks **plainly, directly, and honestly** — no complicated, academic, or buzzword language. Match that voice in every CV and cover letter.
+
+- **Say it the way he would say it out loud.** If a phrase would feel like a performance to defend in an interview, cut it.
+- **Plain words over corporate/abstract ones.** Concrete beats abstract every time.
+- **Short, declarative sentences.** One idea per sentence is fine. Don't pad.
+- **Plain does NOT mean awkward or broken.** Never introduce grammatical errors or non-idiomatic phrasing. Plain *and* correct.
+- **Keep facts and numbers exact** — only the wording gets simpler.
+
+Swap corporate phrasing for plain (examples, not exhaustive):
+
+| Instead of | Write |
+|---|---|
+| compounds / holds at scale | has to hold up as things grow |
+| maps directly to | is exactly / is the work I do |
+| design-engineering boundary / frontier | where design meets engineering |
+| mature product organisation | large (or serious) product company |
+| retained as / engaged as | worked as / led |
+| integrate seamlessly into the development lifecycle | work closely with engineering so design fits how they build |
+| feedback loops / continuously iterate | used feedback to keep improving |
+| best practices | name the actual practice |
+| accelerate implementation | build faster |
+| drive growth / drove results | raised X by Y / cut X by Y |
+| align decisions with business objectives | line up decisions with business goals |
+| spearheaded / leveraged / utilised / facilitated | led / used / used / ran |
+
 ## Application Headline (Best Practice)
 
 The subject line / headline of the application should be engaging and specific, not generic.

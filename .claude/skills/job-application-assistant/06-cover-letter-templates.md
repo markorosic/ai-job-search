@@ -1,26 +1,25 @@
 # Cover Letter Templates and Tailoring Guide
 
-## Template: Custom cover.cls (XeLaTeX)
+## Template: Custom cover-fira.cls (XeLaTeX)
 
-Cover letters use a custom LaTeX document class (`cover.cls`) with Lato/Raleway fonts.
+Cover letters use a custom LaTeX document class (`cover-fira.cls`) with Fira Sans — matching the CV font for a unified visual identity.
 
-**Output file:** `cover_letters/cover_<company>_<role>.tex`
-**Compile with:** XeLaTeX (cover.cls requires fontspec)
-**Font directory:** `cover_letters/OpenFonts/fonts/`
+**Output file:** `applications/<company>/Marko_Rosic_cover_letter.tex`
+**Compile with:** **Tectonic** — XeTeX-based, handles `cover-fira.cls`/fontspec natively. `cover-fira.cls` lives in `cover_letters/`; pass `-Z search-path=../../cover_letters` so Tectonic can find it. Fira Sans is a system font — no OpenFonts path references needed in `.tex` files.
 
 ### Compile command
 
 ```bash
-cd cover_letters && xelatex -interaction=nonstopmode cover_<company>_<role>.tex
+cd applications/<company> && tectonic -Z search-path=../../cover_letters Marko_Rosic_cover_letter.tex
 ```
 
-Expected output: `Output written on cover_<company>_<role>.pdf (1 page, ...)`. Any page count other than 1 is a failure that must be fixed before presenting to the user.
+Expected output: a clean compile producing `Marko_Rosic_cover_letter.pdf` (1 page). Any page count other than 1 is a failure that must be fixed before presenting to the user.
 
 ## Compile-and-Inspect Loop (MANDATORY)
 
 After writing the cover letter and before presenting to the user, always compile and visually inspect the PDF. Iterate until the layout is clean:
 
-1. Run `xelatex -interaction=nonstopmode cover_<company>_<role>.tex`
+1. Run `cd applications/<company> && tectonic -Z search-path=../../cover_letters Marko_Rosic_cover_letter.tex`
 2. Confirm page count is exactly 1 and compile succeeded
 3. Read the PDF via the Read tool and visually check: signature fits at the bottom, no text cut off, bullet font matches body
 
@@ -36,11 +35,11 @@ The `\lettercontent{}` macro appends `\\` to its argument. This breaks when the 
 \end{itemize}}
 ```
 
-**Correct — close `\lettercontent{}` before the list and wrap the list in the matching Raleway-Medium font so typography stays consistent:**
+**Correct — close `\lettercontent{}` before the list and wrap the list in the matching Fira Sans font so typography stays consistent:**
 ```latex
 \lettercontent{Here is how my experience maps:}
 
-{\raggedright\fontspec[Path = OpenFonts/fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{13pt}\selectfont
+{\raggedright\fontspec{Fira Sans}\fontsize{11pt}{13pt}\selectfont
 \begin{itemize}
     \item ...
 \end{itemize}\par}
@@ -49,7 +48,7 @@ The `\lettercontent{}` macro appends `\\` to its argument. This breaks when the 
 \lettercontent{[next paragraph]}
 ```
 
-The font wrapper is mandatory — if you just move `\begin{itemize}` outside `\lettercontent{}` without the `\fontspec` block, bullets render in the default body font (Lato) and visually mismatch the rest of the letter.
+The font wrapper is mandatory — if you just move `\begin{itemize}` outside `\lettercontent{}` without the `\fontspec` block, bullets render in the default body font (Fira Sans Light) at a slightly different weight and visually mismatch the rest of the letter.
 
 ## Document Structure
 
@@ -58,7 +57,7 @@ The font wrapper is mandatory — if you just move `\begin{itemize}` outside `\l
 % Cover Letter - [Company], [Role]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[]{cover}
+\documentclass[]{cover-fira}
 \usepackage{fancyhdr}
 
 \pagestyle{fancy}
@@ -135,7 +134,7 @@ The font wrapper is mandatory — if you just move `\begin{itemize}` outside `\l
 - Use `\vspace{.5cm}` between major sections for readability (only if space permits)
 
 ### Bullet Lists
-- Place `\begin{itemize}...\end{itemize}` **outside** a `\lettercontent{}` block (see "Known template pitfall" above), wrapped in the matching Raleway-Medium `\fontspec` so the bullet font matches the body
+- Place `\begin{itemize}...\end{itemize}` **outside** a `\lettercontent{}` block (see "Known template pitfall" above), wrapped in `{\raggedright\fontspec{Fira Sans}\fontsize{11pt}{13pt}\selectfont ... \par}` so the bullet font matches the body
 - 3-5 bullets is ideal
 - Start each bullet with bold label or action verb
 - Use `\textbf{Label:}` for category-style bullets

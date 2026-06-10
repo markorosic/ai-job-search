@@ -2,73 +2,67 @@
 
 <!-- SETUP: Profile statements and section ordering are personalized by running /setup -->
 
-## Template: LaTeX moderncv (Banking Style)
+## Template: Custom Fira Sans XeLaTeX (Single-Column)
 
-All CVs use the moderncv LaTeX package with the "banking" style and "blue" color scheme.
+All CVs use the custom single-column XeLaTeX `article` template with Fira Sans font and TikZ timeline asterisks with hairline connectors. Do **not** use moderncv or `main_example.tex` as a base — they use a different engine and class.
 
-**Output file:** `cv/main_<company>.tex`
-**Compile with:** **lualatex** on MiKTeX/TeX Live. pdflatex often fails on modern MiKTeX installs with `fontawesome5` font-expansion errors; lualatex handles the same sources cleanly.
-**Master reference:** `cv/main_example.tex` (comprehensive CV with all competencies, experience, and achievements - use as source when building targeted CVs)
+**Output file:** `applications/<company>/Marko_Rosic_CV.tex`
+**Compile with:** **Tectonic** — XeTeX-based, auto-fetches packages, leaves no `.aux`/`.log` artifacts. Fira Sans must be installed as a system font (`brew install --cask font-fira-sans`).
+**Canonical reference:** `cv/Marko_Rosic_CV_skyscanner.tex` — copy this as the starting point for every new tailored CV.
 
 ### Compile command
 
 ```bash
-cd cv && lualatex -interaction=nonstopmode main_<company>.tex
+cd applications/<company> && tectonic Marko_Rosic_CV.tex
 ```
 
-Expected output: `Output written on main_<company>.pdf (2 pages, ...)`. Any page count other than 2 is a failure that must be fixed before presenting to the user.
+Expected output: a clean compile producing `Marko_Rosic_CV.pdf` (2 pages). Tectonic emits harmless "absolute path / not reproducible" font warnings — ignore them. Any page count other than 2 is a failure that must be fixed before presenting to the user.
 
 ## Document Structure
 
+The template is a custom XeLaTeX `article` class — **not** moderncv. The canonical source is `cv/Marko_Rosic_CV_skyscanner.tex`. Copy it verbatim as the starting point, then tailor content only.
+
+Key preamble settings (do not change without good reason):
+
 ```latex
-\documentclass[11pt,a4paper,sans]{moderncv}
-\moderncvstyle{banking}
-\moderncvcolor{blue}
+% !TeX program = xelatex
+\documentclass[a4paper,9.5pt]{article}
+\usepackage{fontspec}
+\setmainfont{Fira Sans}[
+  BoldFont={Fira Sans Bold}, ItalicFont={Fira Sans Italic},
+  BoldItalicFont={Fira Sans Bold Italic}
+]
+\usepackage[a4paper, top=1.5cm, bottom=1.4cm, left=1.8cm, right=1.8cm]{geometry}
 
-% Force both first and last name AND section headings to render in moderncv
-% blue (color1). Default banking on lualatex+MiKTeX leaves these black, which
-% looks inconsistent with the rest of the blue accent scheme.
-\renewcommand*{\firstnamestyle}[1]{{\fontsize{34}{36}\bfseries\upshape\color{color1}#1}}
-\renewcommand*{\lastnamestyle}[1]{{\fontsize{34}{36}\bfseries\upshape\color{color1}#1}}
-\renewcommand*{\sectionstyle}[1]{{\sectionfont\color{color1}#1}}
+% Column widths (keep in sync — \cvcontcol is derived automatically)
+\newlength{\cvdatecol}  \setlength{\cvdatecol}{2.75cm}
+\newlength{\cvsymcol}   \setlength{\cvsymcol}{0.5cm}
+\newlength{\cvcontcol}  \setlength{\cvcontcol}{\dimexpr\textwidth-\cvdatecol-\cvsymcol\relax}
 
-\usepackage[utf8]{inputenc}
-\usepackage{hyperref}
-\hypersetup{
-    colorlinks=true,
-    linkcolor=blue,
-    filecolor=magenta,
-    urlcolor=blue,
-    pdftitle={[YOUR_NAME] - CV},
-    pdfpagemode=FullScreen,
-}
-\usepackage[scale=0.77]{geometry}
-\usepackage{import}
-
-% Personal data
-\name{[FIRST_NAME]}{[LAST_NAME]}
-\address{[YOUR_ADDRESS]}{}{}
-\phone[mobile]{[YOUR_PHONE]}
-\email{[YOUR_EMAIL]}
-\extrainfo{\href{[YOUR_LINKEDIN_URL]}{LinkedIn}, \href{[YOUR_GITHUB_URL]}{GitHub}}
-
-\begin{document}
-\makecvtitle
-
-% 1. Profile statement (1-3 sentences, tailored per role)
-% 2. Skills section
-% 3. Education section
-% 4. Professional Experience section
-% 5. Selected Publications (if applicable)
-% 6. Honors and Awards (if applicable)
-% 7. References
-
-\end{document}
+% Section spacing
+\titlespacing*{\section}{0pt}{22pt}{12pt}
 ```
 
-### Color overrides
+Entry macros — use `\cventry` for roles without a context note, `\cventrynote` when a parenthetical company explanation is needed:
 
-The three `\renewcommand*` lines in the preamble are required on lualatex+MiKTeX. Without them the firstname, lastname, and section headings render in black even though `\moderncvcolor{blue}` is set, which looks inconsistent with the rest of the blue accent scheme (links, bullet markers, contact icons). The override forces all three to use `color1` (moderncv's accent colour, which becomes blue under `\moderncvcolor{blue}`). Both names render bold; if you prefer the firstname in regular weight, change the firstnamestyle override from `\bfseries` to `\mdseries`. Don't drop the override - on most modern installs the defaults render visibly wrong.
+```latex
+\cventry{DATE}{TITLE}{COMPANY/LOCATION}
+\cventrynote{DATE}{TITLE}{COMPANY/LOCATION}{Context note in italic gray}
+```
+
+Bullet lists inside entries use the `cvitems` environment:
+
+```latex
+\begin{cvitems}
+  \item ...
+\end{cvitems}
+```
+
+Skills use a two-column `minipage` layout with `\skillblock{Category}{Items}`.
+
+### Spacing inside itemize lists (important)
+
+**Do not place `\vspace{...}` between `\item` entries in a `cvitems` list.** It creates paragraph breaks that interact unpredictably with `\itemsep`, producing one oversized gap. Use the list's native `itemsep=3pt` uniform spacing instead.
 
 ### Spacing inside itemize lists (important)
 
@@ -150,7 +144,7 @@ If there is a gap in your employment history:
 
 After writing the CV and before presenting to the user, always compile and visually inspect the PDF. Iterate until the layout is clean. Workflow:
 
-1. Run `lualatex -interaction=nonstopmode main_<company>.tex`
+1. Run `cd cv && tectonic Marko_Rosic_CV_<company>.tex`
 2. Check the output page count: must be exactly 2
 3. Read the PDF via the Read tool and visually inspect both pages
 4. Check for **orphaned entries**: a `\cventry` title line must never sit alone at the bottom of page 1 with its bullets on page 2
