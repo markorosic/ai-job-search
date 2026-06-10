@@ -70,8 +70,8 @@ job_search_tracker.csv
 # Upskill reports (personal output)
 upskill/*.md
 
-# Agent usage logs
-.agents/
+# Agent skill dependencies (source files are tracked, node_modules are not)
+.agents/skills/*/cli/node_modules/
 
 # Personal fit-evaluation files (generated per application — do not share)
 applications/*.md
