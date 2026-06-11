@@ -34,7 +34,7 @@ Optional arguments:
 
 ### Step 1: Search
 
-Run searches across all available tools in priority order. By default, cover Priority 0–2 categories from `search-queries.md`. If the user said "broad", run all categories.
+Run searches across all available tools in priority order. By default, cover Priority 0–2.5 categories from `search-queries.md` (2.5 is the ex-Yu category — Serbia home base + SI/HR). If the user said "broad", run all categories.
 
 #### Step 1a: CLI tools (structured APIs — run in parallel)
 
@@ -42,7 +42,7 @@ Use the Agent tool to run these in parallel:
 
 - **arbeitnow-search**: `bun run .agents/skills/arbeitnow-search/cli/src/cli.ts search --visa --location Germany --limit 20 --format json` (and a second call with `--location Netherlands`)
 - **nofluffjobs-search**: `bun run .agents/skills/nofluffjobs-search/cli/src/cli.ts search --region pl --region cz --category ux --format json`
-- **eures-search**: `bun run .agents/skills/eures-search/cli/src/cli.ts search --countries de --countries nl --countries pl --countries cz --keywords "Head of Design" --limit 20 --format json` (and a second call with `--keywords "design systems"`)
+- **eures-search**: `bun run .agents/skills/eures-search/cli/src/cli.ts search --countries de --countries nl --countries pl --countries cz --countries si --countries hr --keywords "Head of Design" --limit 20 --format json` (and a second call with `--keywords "design systems"`)
 - **justjoin-search**: skip — API endpoint unavailable (stub only)
 
 Adjust keywords to match the current search category and user focus area.
@@ -54,6 +54,13 @@ Invoke the `linkedin-jobs` agent. Pass the target role keywords and countries fr
 #### Step 1c: WebSearch fallback agent
 
 Invoke the `websearch-jobs` agent. Pass the current search category and target countries. This covers StepStone, Indeed, and Glassdoor.
+
+#### Step 1d: Ex-Yu agent
+
+Invoke the `exyu-jobs` agent (in parallel with Step 1c). It covers the Serbian boards
+(poslovi.infostud.com, helloworld.rs, poslovi.rs) plus mojedelo.com (SI) and
+mojposao.net (HR), and returns Serbian results tagged with an `eu_pathway` signal
+instead of a visa signal.
 
 ### Step 2: Fetch & Parse
 
@@ -73,6 +80,10 @@ For each new job, do a rapid fit check (NOT the full evaluation from `04-job-eva
 
 Also capture the **sponsorship signal** (the gating filter from `04-job-evaluation.md`):
 ✅ offers visa sponsorship / relocation · ⚠️ silent (confirm before applying) · ❌ requires existing EU work authorization.
+
+**Exception — Serbian jobs:** the visa signal does not apply at home. Capture the
+**EU-pathway signal** instead: 🔁 international/EU-HQ employer (transfer path plausible) ·
+🏠 purely local · ❓ unknown.
 
 ### Step 4: Deduplicate & Store
 
@@ -112,6 +123,8 @@ For each high-match job, add 2-3 bullet points:
 - Key requirements to check
 - Any red flags
 ```
+
+For Serbian jobs, the Visa column shows the EU-pathway signal (🔁 EU path / 🏠 local / ❓ unknown) instead of the sponsorship icon.
 
 After presenting, ask:
 > "Want me to evaluate any of these in detail? Just give me the number(s)."
