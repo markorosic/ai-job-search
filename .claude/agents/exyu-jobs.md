@@ -46,6 +46,8 @@ read the job cards out of the HTML.
 ### Step 3: Pre-filter before fetching detail pages
 
 Skip junior/intern roles, non-design roles, and gambling employers based on title/snippet.
+On SI/HR boards, weight English-language postings higher — they proxy for international
+company culture, the candidate's strongest fit.
 Fetch only the top 3–5 most promising postings per board. Maximum 12 WebFetch calls total.
 
 ### Step 4: Classify and output
@@ -80,11 +82,25 @@ Return results as a JSON array, one object per job:
 }
 ```
 
-(SI/HR objects carry `"sponsorship"` instead of `"eu_pathway"`.)
+SI/HR objects carry `"sponsorship"` instead of `"eu_pathway"`:
+
+```json
+{
+  "title": "Design Lead",
+  "company": "Primer d.o.o.",
+  "location": "Ljubljana, Slovenia",
+  "url": "https://www.mojedelo.com/...",
+  "posted": "recent",
+  "source": "mojedelo.com",
+  "sponsorship": "routine-permit",
+  "key_requirements": ["design systems", "team leadership", "English"]
+}
+```
 
 ## Rules
 
 - Never fabricate job listings. Only report what WebSearch and WebFetch actually return.
+- Never apply `eu_pathway` to SI/HR results; never apply `sponsorship` to Serbian results.
 - Skip postings with expired deadlines.
 - Skip gambling/betting/casino/iGaming employers — no exceptions.
 - If a board returns nothing for a query, move on — do not retry the same query.
