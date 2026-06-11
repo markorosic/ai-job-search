@@ -59,7 +59,7 @@ Invoke the `websearch-jobs` agent. Pass the current search category and target c
 
 Invoke the `exyu-jobs` agent (in parallel with Step 1c). It covers the Serbian boards
 (poslovi.infostud.com, helloworld.rs, poslovi.rs) plus mojedelo.com (SI) and
-mojposao.net (HR), and returns Serbian results tagged with an `eu_pathway` signal
+moj-posao.net (HR), and returns Serbian results tagged with an `eu_pathway` signal
 instead of a visa signal.
 
 ### Step 2: Fetch & Parse
