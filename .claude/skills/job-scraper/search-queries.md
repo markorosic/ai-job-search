@@ -155,13 +155,13 @@ Instead, rank results by country tier and sponsorship signal:
 
 - **Keep & prioritise:** roles in primary/bridge countries that mention visa sponsorship or relocation
 - **Keep & flag:** good-fit roles that are silent on sponsorship (confirm before applying)
+- **Serbia (home base):** never filter Serbian roles by visa/sponsorship language — it does
+  not apply. Rank by EU pathway: international/EU-HQ employer (🔁) above purely local (🏠),
+  unknown in between. Gambling exclusion still applies (large iGaming presence in Belgrade).
 - **Skip:** roles that explicitly require existing EU work authorization / state "no sponsorship"
 - **Skip:** gambling / betting / casino / iGaming employers (candidate is pivoting out)
 - **Deprioritise:** Italy (restrictive non-EU quotas) and roles requiring fluent local language the
   candidate lacks (German/Dutch/Spanish/Italian); English-workable roles rank higher
-- **Serbia (home base):** never filter Serbian roles by visa/sponsorship language — it does
-  not apply. Rank by EU pathway: international/EU-HQ employer (🔁) above purely local (🏠),
-  unknown in between. Gambling exclusion still applies (large iGaming presence in Belgrade).
 
 ## Date Filter
 
