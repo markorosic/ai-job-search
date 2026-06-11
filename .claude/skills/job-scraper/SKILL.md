@@ -85,6 +85,10 @@ Also capture the **sponsorship signal** (the gating filter from `04-job-evaluati
 **EU-pathway signal** instead: 🔁 international/EU-HQ employer (transfer path plausible) ·
 🏠 purely local · ❓ unknown.
 
+SI/HR results from the `exyu-jobs` agent may carry `"sponsorship": "routine-permit"` —
+render these as ⚠️ with a "(routine permit)" note: the posting is silent, but the SI/HR
+employer-driven permit is routine for Serbian citizens, so it is not gating.
+
 ### Step 4: Deduplicate & Store
 
 1. Add ALL fetched jobs (new and skipped) to `seen_jobs.json` with structure:
@@ -97,6 +101,7 @@ Also capture the **sponsorship signal** (the gating filter from `04-job-evaluati
       "url": "...",
       "first_seen": "YYYY-MM-DD",
       "fit": "high/medium/low",
+      "signal": "sponsorship or eu_pathway value, when the source provided one",
       "status": "new/skipped/evaluated"
     }
   }
@@ -141,7 +146,7 @@ If the user decides to apply to any job, add a row to `job_search_tracker.csv`.
 
 1. **Never fabricate job postings.** Only present jobs found via actual WebSearch/WebFetch results.
 2. **Respect deduplication.** Always check seen_jobs.json AND job_search_tracker.csv before presenting.
-3. **Relocation is the goal, not a filter.** Focus on the configured target countries (primaries first, then bridges). Do NOT skip roles for requiring relocation; skip only roles that explicitly require existing EU work authorization or state "no sponsorship".
+3. **Relocation is the goal, not a filter.** Focus on the configured target countries (primaries first, then bridges; the Serbia home base is also in scope for the default run — see Step 1d). Do NOT skip roles for requiring relocation; skip only roles that explicitly require existing EU work authorization or state "no sponsorship" — neither applies to Serbian home-base roles.
 4. **Only open positions.** Skip postings with expired deadlines or those marked as closed.
 5. **Be efficient with WebFetch.** Don't fetch every search result - use titles and snippets to pre-filter before fetching.
 6. **Parallel searches.** Use the Agent tool or parallel WebSearch calls to speed up the search phase.
