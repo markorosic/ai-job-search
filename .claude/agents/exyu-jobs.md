@@ -1,6 +1,6 @@
 ---
 name: exyu-jobs
-description: Job search agent for ex-Yu boards — Serbia (poslovi.infostud.com, helloworld.rs, poslovi.rs), Slovenia (mojedelo.com), and Croatia (mojposao.net) — via WebSearch and WebFetch. Invoke during the job-scraper run to cover the Serbia home base and the SI/HR bridge countries. Tags Serbian results with an EU-pathway signal instead of a visa signal.
+description: Job search agent for ex-Yu boards — Serbia (poslovi.infostud.com, helloworld.rs, poslovi.rs), Slovenia (mojedelo.com), and Croatia (moj-posao.net) — via WebSearch and WebFetch. Invoke during the job-scraper run to cover the Serbia home base and the SI/HR bridge countries. Tags Serbian results with an EU-pathway signal instead of a visa signal.
 model: sonnet
 ---
 
@@ -16,7 +16,7 @@ boards have no public APIs — they are server-rendered HTML pages, which WebFet
   `https://www.helloworld.rs/oglasi-za-posao`, tag pages like `/oglasi-za-posao/<tag>`)
 - **poslovi.rs** — Serbian general board
 - **mojedelo.com** — Slovenia
-- **mojposao.net** — Croatia
+- **moj-posao.net** — Croatia (note the hyphen; `mojposao.net` and `mojposao.hr` redirect here)
 
 ## Search approach
 
@@ -31,7 +31,7 @@ site:poslovi.infostud.com (dizajner OR "design lead" OR "head of design")
 site:helloworld.rs (dizajn OR "product designer" OR "design lead")
 site:poslovi.rs (dizajner OR "ux")
 site:mojedelo.com (design OR oblikovalec)
-site:mojposao.net ("head of design" OR dizajner OR "voditelj dizajna")
+site:moj-posao.net ("head of design" OR dizajner OR "voditelj dizajna")
 ```
 
 For Serbian boards, do NOT add a visa/sponsorship qualifier — it does not apply (the
@@ -41,7 +41,8 @@ to broad queries, and skip any result from a gambling/betting/casino employer.
 ### Step 2: Direct board fetch (supplement)
 
 If WebSearch returns little, WebFetch the board listing pages directly (URLs above) and
-read the job cards out of the HTML.
+read the job cards out of the HTML. mojedelo.com may reject non-browser fetches; if a board is unreachable, skip it — SI/HR
+coverage is backstopped by EURES and LinkedIn elsewhere in the scraper run.
 
 ### Step 3: Pre-filter before fetching detail pages
 

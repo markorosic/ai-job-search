@@ -30,7 +30,7 @@ boards that surface sponsorship/relocation roles, then pan-EU aggregators, then 
 - Spain: **infojobs.net**, **tecnoempleo.com**
 - Italy: **infojobs.it**, monster.it
 - Poland: **pracuj.pl** · Czechia: **jobs.cz**, **startupjobs.cz**
-- Slovenia: **mojedelo.com** · Croatia: **mojposao.net** · Malta: **keepmeposted.com.mt**, **castille.com**
+- Slovenia: **mojedelo.com** · Croatia: **moj-posao.net** · Malta: **keepmeposted.com.mt**, **castille.com**
 - Serbia (home base): **poslovi.infostud.com**, **helloworld.rs** (IT, Infostud-owned), **poslovi.rs**
 
 ## LinkedIn guest job-search (unauthenticated — preferred for LinkedIn)
@@ -128,7 +128,7 @@ site:poslovi.infostud.com (dizajner OR "design lead" OR "head of design") -casin
 site:helloworld.rs (dizajn OR "product designer" OR "design lead") -casino -gambling -betting -igaming
 site:poslovi.rs (dizajner OR "ux") -casino -gambling -betting -igaming
 site:mojedelo.com (design OR oblikovalec) -casino -gambling -betting
-site:mojposao.net ("head of design" OR dizajner OR "voditelj dizajna") -casino -gambling -betting
+site:moj-posao.net ("head of design" OR dizajner OR "voditelj dizajna") -casino -gambling -betting
 ```
 
 ### Priority 3: Product / UX Lead
