@@ -31,6 +31,7 @@ boards that surface sponsorship/relocation roles, then pan-EU aggregators, then 
 - Italy: **infojobs.it**, monster.it
 - Poland: **pracuj.pl** · Czechia: **jobs.cz**, **startupjobs.cz**
 - Slovenia: **mojedelo.com** · Croatia: **mojposao.net** · Malta: **keepmeposted.com.mt**, **castille.com**
+- Serbia (home base): **poslovi.infostud.com**, **helloworld.rs** (IT, Infostud-owned), **poslovi.rs**
 
 ## LinkedIn guest job-search (unauthenticated — preferred for LinkedIn)
 
@@ -64,6 +65,11 @@ EU Long-Term Residence after 5 years). See `EU_RELOCATION_PLAN.md` for the full 
 
 - **Primary:** Germany, Netherlands
 - **Bridge:** Poland, Czechia, Slovenia, Croatia, Malta *(Malta's main pull was iGaming — weaker now given the no-gambling preference, but still viable for fintech/tech in English)*
+  *Slovenia and Croatia carry an ex-Yu advantage: employer-driven work permits that are routine
+  for Serbian citizens, and no practical language barrier.*
+- **Home base:** Serbia — no work authorization needed. Target international / EU-headquartered
+  companies in Belgrade where an intra-company transfer (EU ICT permit) or internal relocation
+  opens an EU path later. Rank by EU-pathway signal, not visa signal.
 - **Secondary:** Spain
 - **Lowest priority:** Italy (restrictive non-EU quotas — Decreto Flussi)
 
@@ -95,6 +101,7 @@ site:linkedin.com/jobs "Head of Design" Germany ("visa sponsorship" OR relocatio
 site:linkedin.com/jobs "Head of UX" Netherlands "recognized sponsor"
 site:stepstone.de ("Head of Design" OR "Design Lead") English
 ("Head of Design" OR "Design Lead") "design systems" "visa sponsorship" (Germany OR Netherlands) -casino -gambling -betting
+("Head of Design" OR "Design Lead") (Slovenia OR Croatia OR Ljubljana OR Zagreb) -casino -gambling -betting
 ```
 
 ### Priority 2: Design Systems & DesignOps
@@ -102,10 +109,23 @@ site:stepstone.de ("Head of Design" OR "Design Lead") English
 Your distinctive specialism — often English-first and in demand at scaling product orgs.
 
 ```
-site:linkedin.com/jobs "design systems" lead (Netherlands OR Poland OR Czechia) ("visa sponsorship" OR relocation)
+site:linkedin.com/jobs "design systems" lead (Netherlands OR Poland OR Czechia OR Slovenia OR Croatia) ("visa sponsorship" OR relocation)
 site:nofluffjobs.com "design system"
 site:indeed.nl "DesignOps" English
 EURES "design systems"
+```
+
+### Priority 2.5: Ex-Yu — Serbia home base + SI/HR local boards
+
+Runs in the default scrape (executed by the **exyu-jobs** agent). Serbian queries take NO
+sponsorship qualifier — rank by EU pathway instead. Local-language terms widen recall.
+
+```
+site:poslovi.infostud.com (dizajner OR "design lead" OR "head of design")
+site:helloworld.rs (dizajn OR "product designer" OR "design lead")
+site:poslovi.rs (dizajner OR "ux")
+site:mojedelo.com (design OR oblikovalec)
+site:mojposao.net ("head of design" OR dizajner OR "voditelj dizajna")
 ```
 
 ### Priority 3: Product / UX Lead
@@ -139,6 +159,9 @@ Instead, rank results by country tier and sponsorship signal:
 - **Skip:** gambling / betting / casino / iGaming employers (candidate is pivoting out)
 - **Deprioritise:** Italy (restrictive non-EU quotas) and roles requiring fluent local language the
   candidate lacks (German/Dutch/Spanish/Italian); English-workable roles rank higher
+- **Serbia (home base):** never filter Serbian roles by visa/sponsorship language — it does
+  not apply. Rank by EU pathway: international/EU-HQ employer (🔁) above purely local (🏠),
+  unknown in between. Gambling exclusion still applies (large iGaming presence in Belgrade).
 
 ## Date Filter
 
@@ -150,3 +173,4 @@ If the user specifies a focus area or a country, select matching queries and gen
 - "/scrape [focus_area]" -> relevant role-category queries + custom focus-specific queries
 - "/scrape germany" (or any country) -> run all role categories scoped to that country, with the sponsorship qualifier
 - "/scrape bridge" -> scope to the bridge-country tier (Poland, Czechia, Slovenia, Croatia, Malta)
+- "/scrape exyu" -> scope to Serbia + Slovenia + Croatia (home base + ex-Yu bridges), Priority 2.5 plus SI/HR queries from other categories
