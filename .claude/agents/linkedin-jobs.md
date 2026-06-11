@@ -25,6 +25,8 @@ You are a LinkedIn job search agent. You find jobs using LinkedIn's unauthentica
 https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=<url-encoded>&geoId=<id>&f_TPR=r1209600&start=0
 ```
 
+For Slovenia / Croatia / Serbia, omit `geoId` entirely and substitute `location=<country>` — see GeoId reference above.
+
 Useful filter params:
 - `f_TPR=r604800` = last 7 days · `f_TPR=r1209600` = last 14 days
 - `f_WT=2` = remote · `f_WT=3` = hybrid
