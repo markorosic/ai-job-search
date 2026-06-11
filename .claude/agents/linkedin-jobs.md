@@ -13,6 +13,9 @@ You are a LinkedIn job search agent. You find jobs using LinkedIn's unauthentica
 - Poland: `105072130`
 - Czech Republic: `104508036`
 - Remote/Worldwide: `92000000`
+- Slovenia / Croatia / Serbia: no geoId needed — use the `location=<country>` text param
+  instead of `geoId`, e.g. `...search?keywords=design&location=Serbia`. Verified to return
+  correctly-located jobs for all three.
 
 ## Search flow
 
