@@ -76,7 +76,9 @@ EU Long-Term Residence after 5 years). See `EU_RELOCATION_PLAN.md` for the full 
 ## Query Categories
 
 Two axes: **what** (role/skill, below) × **where** (country tier, above). Run primary countries
-first and **always add a sponsorship qualifier** — `("visa sponsorship" OR relocation OR "Blue Card")`.
+first and **always add a sponsorship qualifier** — `("visa sponsorship" OR relocation OR "Blue Card")`
+— **except** Serbian home-base queries and SI/HR local-board queries (Priority 2.5): Serbia takes no
+qualifier (rank by EU pathway instead) and SI/HR use routine employer-driven work permits.
 **Exclude gambling** where a query is broad — append `-casino -gambling -betting -igaming`.
 Language note: favour English-first roles in DE; NL is very English-friendly; English-first tech
 boards (Honeypot, Landing.jobs, NoFluffJobs) suit DE/ES/IT where local-language depth is missing.
@@ -109,7 +111,8 @@ site:stepstone.de ("Head of Design" OR "Design Lead") English
 Your distinctive specialism — often English-first and in demand at scaling product orgs.
 
 ```
-site:linkedin.com/jobs "design systems" lead (Netherlands OR Poland OR Czechia OR Slovenia OR Croatia) ("visa sponsorship" OR relocation)
+site:linkedin.com/jobs "design systems" lead (Netherlands OR Poland OR Czechia) ("visa sponsorship" OR relocation)
+site:linkedin.com/jobs "design systems" lead (Slovenia OR Croatia) -casino -gambling -betting
 site:nofluffjobs.com "design system"
 site:indeed.nl "DesignOps" English
 EURES "design systems"
@@ -121,11 +124,11 @@ Runs in the default scrape (executed by the **exyu-jobs** agent). Serbian querie
 sponsorship qualifier — rank by EU pathway instead. Local-language terms widen recall.
 
 ```
-site:poslovi.infostud.com (dizajner OR "design lead" OR "head of design")
-site:helloworld.rs (dizajn OR "product designer" OR "design lead")
-site:poslovi.rs (dizajner OR "ux")
-site:mojedelo.com (design OR oblikovalec)
-site:mojposao.net ("head of design" OR dizajner OR "voditelj dizajna")
+site:poslovi.infostud.com (dizajner OR "design lead" OR "head of design") -casino -gambling -betting -igaming
+site:helloworld.rs (dizajn OR "product designer" OR "design lead") -casino -gambling -betting -igaming
+site:poslovi.rs (dizajner OR "ux") -casino -gambling -betting -igaming
+site:mojedelo.com (design OR oblikovalec) -casino -gambling -betting
+site:mojposao.net ("head of design" OR dizajner OR "voditelj dizajna") -casino -gambling -betting
 ```
 
 ### Priority 3: Product / UX Lead
