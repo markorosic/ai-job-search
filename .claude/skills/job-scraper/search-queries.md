@@ -67,10 +67,11 @@ EU Long-Term Residence after 5 years). See `EU_RELOCATION_PLAN.md` for the full 
 - **Bridge:** Poland, Czechia, Slovenia, Croatia, Malta *(Malta's main pull was iGaming — weaker now given the no-gambling preference, but still viable for fintech/tech in English)*
   *Slovenia and Croatia carry an ex-Yu advantage: employer-driven work permits that are routine
   for Serbian citizens, and no practical language barrier.*
-- **Home base:** Serbia — no work authorization needed. Target international / EU-headquartered
-  companies in Belgrade where an intra-company transfer (EU ICT permit) or internal relocation
-  opens an EU path later. Rank by EU-pathway signal, not visa signal.
 - **Secondary:** Spain
+- **Tertiary (home base, Strategy C):** Serbia — no work authorization needed. Target
+  international / EU-headquartered companies in Belgrade where an intra-company transfer
+  (EU ICT permit) or internal relocation opens an EU path later. Rank by EU-pathway signal,
+  not visa signal.
 - **Lowest priority:** Italy (restrictive non-EU quotas — Decreto Flussi)
 
 ## Query Categories
@@ -82,6 +83,12 @@ qualifier (rank by EU pathway instead) and SI/HR use routine employer-driven wor
 **Exclude gambling** where a query is broad — append `-casino -gambling -betting -igaming`.
 Language note: favour English-first roles in DE; NL is very English-friendly; English-first tech
 boards (Honeypot, Landing.jobs, NoFluffJobs) suit DE/ES/IT where local-language depth is missing.
+
+**Seniority ladder:** **Head** roles are the ideal but rarely land without referrals at EU
+companies — treat as stretch, always surface when found. **Lead** is the realistic primary
+target. **Senior** roles qualify too, but only at really good companies or on great projects —
+they work as an EU entry the candidate can grow from (move up internally, or switch companies
+once in the EU). Generic senior IC roles at unremarkable companies are still a skip.
 
 ### Priority 0: Sponsorship & relocation boards (run first)
 
@@ -131,13 +138,17 @@ site:mojedelo.com (design OR oblikovalec) -casino -gambling -betting
 site:moj-posao.net ("head of design" OR dizajner OR "voditelj dizajna") -casino -gambling -betting
 ```
 
-### Priority 3: Product / UX Lead
+### Priority 3: Product / UX Lead — and Senior at standout companies
 
-Adjacent lead roles to widen the net — include bridge countries.
+Adjacent lead roles to widen the net — include bridge countries. Senior IC roles count **only**
+when the company or project is genuinely strong (see Seniority ladder above) — judge by product
+reputation, design-system maturity, and engineering culture, not just the title.
 
 ```
 site:linkedin.com/jobs "Lead Product Designer" "design systems" (Germany OR Netherlands OR Poland) "visa sponsorship"
 site:linkedin.com/jobs "UX Lead" "design systems" (Slovenia OR Croatia OR Czechia) -casino -gambling
+site:linkedin.com/jobs "Senior Product Designer" "design systems" (Germany OR Netherlands) ("visa sponsorship" OR relocation) -casino -gambling
+site:relocate.me "Senior Product Designer"
 ```
 
 ### Priority 4: Broader / English-first remote-friendly
@@ -158,7 +169,7 @@ Instead, rank results by country tier and sponsorship signal:
 
 - **Keep & prioritise:** roles in primary/bridge countries that mention visa sponsorship or relocation
 - **Keep & flag:** good-fit roles that are silent on sponsorship (confirm before applying)
-- **Serbia (home base):** never filter Serbian roles by visa/sponsorship language — it does
+- **Serbia (tertiary / home base, Strategy C):** never filter Serbian roles by visa/sponsorship language — it does
   not apply. Rank by EU pathway: international/EU-HQ employer (🔁) above purely local (🏠),
   unknown in between. Gambling exclusion still applies (large iGaming presence in Belgrade).
 - **Skip:** roles that explicitly require existing EU work authorization / state "no sponsorship"

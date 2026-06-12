@@ -1,6 +1,6 @@
 % !TeX recipe = Tectonic
-% CV - Marko Rosic - tailored for Deel, Lead Product Designer - Fintech
-% Compile with: cd cv && tectonic Marko_Rosic_CV_deel_fintech.tex
+% CV - Marko Rosic - tailored for AKQA, Product Design Director, Berlin
+% Compile with: cd applications/akqa && tectonic Marko_Rosic_CV.tex
 \documentclass[a4paper,9.5pt]{article}
 
 % ── Font ──────────────────────────────────────────────────────────────
@@ -37,6 +37,9 @@
 % ── TikZ ──────────────────────────────────────────────────────────────
 \usepackage{tikz}
 \usetikzlibrary{calc}
+
+% ── Needspace ─────────────────────────────────────────────────────────
+\usepackage{needspace}
 
 % ── Section headings ──────────────────────────────────────────────────
 \usepackage{titlesec}
@@ -95,7 +98,7 @@
   \end{tikzpicture}%
 }
 
-% ── Entry macros ──────────────────────────────────────────────────────
+% ── Entry without company note ────────────────────────────────────────
 \newcommand{\cventry}[3]{%
   \stepcounter{cvsymn}%
   \par\vspace{13pt}%
@@ -110,6 +113,7 @@
   \par%
 }
 
+% ── Entry with italic company context line ────────────────────────────
 \newcommand{\cventrynote}[4]{%
   \stepcounter{cvsymn}%
   \par\vspace{13pt}%
@@ -138,6 +142,7 @@
   ]\small\interlinepenalty=10000%
 }{\end{itemize}}
 
+% ── Skill block ───────────────────────────────────────────────────────
 \newcommand{\skillblock}[2]{%
   {\small\bfseries #1}\newline%
   {\small\color{midgray}#2}%
@@ -162,33 +167,35 @@
 % ── SUMMARY ───────────────────────────────────────────────────────────
 \section{Summary}
 
-{\small Product designer and team lead with 15+ years on high-traffic,
-multi-market consumer products. I build design systems that scale across
-B2C and B2B surfaces. I drive product decisions with research,
-analytics, A/B testing, cutting development time by 30\% and
-time-to-market by 25\%. I design for real users who depend on the
-product daily and I lead small teams by doing the work alongside them.
-I use AI (including Claude Code) to prototype faster and to keep
-improving how I and my team work.}
+{\small Product design director with more than 15 years leading design
+across high-traffic, multi-brand, multi-market consumer products. I
+build design systems and design organisations that scale — from token
+architecture and component libraries to team structure and DesignOps
+process — and I connect design decisions to measurable business
+outcomes. I work at the design-engineering boundary with real technical
+depth: Figma plugin development, AI-orchestrated delivery using Claude
+Code, and HTML/JS prototyping. I am now seeking a director-level role
+where design systems thinking and cross-functional leadership can be
+applied at the highest level of craft and ambition.}
 
 % ── EXPERIENCE ────────────────────────────────────────────────────────
 \section{Experience}
 
-\cventry{5/2025\,--\,Present}{Head of Design (Consulting)}{%
+\cventry{5/2025\,--\,Present}{Design Leadership Consultant}{%
   Beyond Clicks Studio (Independent) \textbar{} Belgrade, Serbia (Remote)}
 \begin{cvitems}
-  \item Design leadership for startup engagements under NDA, owning
+  \item Design-leadership consulting for startup engagements — owning
         design strategy from brand identity to shipped product, with
         AI-augmented delivery (Claude Code) as the operating model
-  \item End-to-end design for a 0→1 consumer platform: brand identity,
-        design language, and a token-based design system (tokens,
-        variables, and components)
-  \item Built a Figma-to-development pipeline on Claude Code that turns
-        design tokens and components into production templates, a single
-        source of truth shared by design and engineering
-  \item Design lead for a second platform in the same portfolio; rebuilt
-        the product-process infrastructure (Figma consolidation, Shape
-        Up cycles, custom-built Trello-to-Asana migration)
+  \item Architected a token-based design system across a multi-product
+        portfolio: Figma variables connected directly to production theme
+        tokens (single source of truth); implemented as a block-based
+        theme with atomic structure — tokens, variables, components
+  \item Built DesignOps infrastructure from scratch: consolidated all
+        design into Figma, introduced Shape Up-style cycles, and migrated
+        project management tools via a custom-built API script
+  \item Developed Figma plugins to automate repetitive design tasks and
+        reduce UI production time across the team
 \end{cvitems}
 
 \cventrynote{7/2024\,--\,5/2025}{Head of UX/UI}{%
@@ -196,113 +203,109 @@ improving how I and my team work.}
   Gentoo Media was established following GiG Media's acquisition of
   Catena Media and subsequent spin-off of its media division.}
 \begin{cvitems}
-  \item Defined the design strategy for a multi-brand product portfolio
-        and built the company-level design system that unified
-        consistency across brands
-  \item Led a design team of seven, managing two team leads who each
-        ran their own sub-team
-  \item Changed how the team worked, cutting time-to-market for new
-        features by 25\%
-  \item Used analytics, A/B testing, and user feedback to drive
-        product improvements
+  \item Set design direction and quality standard across a portfolio of
+        multi-brand consumer products through a company-wide design
+        system with shared token architecture
+  \item Built and led a cross-functional design team of seven,
+        including two team leads who each managed their own sub-team
+  \item Cut time-to-market for new features by 25\% by restructuring
+        how the design team worked with engineering
+  \item Established DesignOps practices: design review cadence,
+        component ownership model, and cross-brand consistency audits
 \end{cvitems}
 
 \cventry{5/2021\,--\,7/2024}{Lead UX/UI Designer}{%
   Catena Media (acquired by GiG Media in 2023) \textbar{} Belgrade, Serbia}
 \begin{cvitems}
-  \item Directed UX from start to finish for high-traffic, multi-market and 
-        multi-language consumer web products, using user-centred methods
-  \item Built a design system for the flagship consumer product that
-        cut development time by 30\%, and later ran it across 10+
-        websites
-  \item Ran A/B tests and used VWO and HotJar to measure and improve
-        key flows
-  \item Mentored junior to senior designers and built a team that worked well
-        together
+  \item Directed end-to-end UX for high-traffic, multi-market consumer
+        web products across 10+ websites
+  \item Built the flagship design system — token-based, multi-brand
+        component library — that cut development time by 30\% and
+        scaled across the full product portfolio
+  \item Drove A/B testing and analytics review cycles, connecting
+        design decisions to conversion and retention outcomes
+  \item Ran cross-functional workshops to align design strategy with
+        product and business goals
 \end{cvitems}
 
 \cventry{10/2018\,--\,5/2021}{Senior UX/UI Designer}{%
   Catena Media \textbar{} Belgrade, Serbia}
 \begin{cvitems}
-  \item Led the redesign of the flagship consumer product, which raised
-        mobile traffic by 20\% and user retention by 15\%
-  \item Brought UX research into the product process and moved the team
-        to decisions based on evidence
-  \item Standardised UX practices across the product team
-  \item Moved the team from Sketch to Figma, which improved how
-        designers and engineers worked together
-  \item Completed Catena Leadership Academy, an internal programme on
-        cross-functional leadership and organisational management
+  \item Led the flagship consumer product redesign, raising mobile
+        traffic by 20\% and user retention by 15\%
+  \item Brought user research and evidence-based methodology into the
+        product process; standardised UX practices across the team
+  \item Led Sketch-to-Figma migration, establishing shared libraries
+        and improving design-engineering workflow
 \end{cvitems}
 
+\needspace{5\baselineskip}
 \cventry{12/2013\,--\,10/2018}{Interaction Designer}{%
   Smith Micro Software, Inc \textbar{} Belgrade, Serbia}
 \begin{cvitems}
-  \item Designed UX for carrier-branded Android apps shipped with
-        Sprint and T-Mobile devices, including Visual Voicemail,
-        Voicemail, and Sock Puppets
+  \item Designed UX for carrier-branded Android apps shipped on Sprint
+        and T-Mobile devices (Visual Voicemail, Sock Puppets)
   \item Designed backend tooling for device management and an IoT
-        location-based notification system, working across consumer
-        interfaces and complex operational data views
-  \item Worked closely with a graphic designer to deliver polished,
-        on-brand interfaces across multiple carrier variants
+        location-based notification system — complex operational
+        interfaces alongside consumer-facing UX
+  \item Won Best of Swiss Apps Gold (Entertainment) for Swisscom TV
+        Android tablet app (2013)
 \end{cvitems}
 
 \cventry{2009\,--\,2013}{UI Designer}{%
   MySkin, Youngculture \textbar{} Belgrade, Serbia}
 \begin{cvitems}
   \item Designed digital products and interfaces across client projects
-        using user-centred methods
 \end{cvitems}
 
 \cventry{2005\,--\,2008}{Co-founder \& CEO}{%
   Mainstream d.o.o. \textbar{} Belgrade, Serbia}
 \begin{cvitems}
-  \item Co-founded a dial-up ISP; led operations, finance, and product
-        design during the founding phase
+  \item Co-founded and led a dial-up ISP; operations, finance, and
+        product design during the founding and growth phase
 \end{cvitems}
 
 \cventry{2000\,--\,2005}{Web Designer/Developer}{%
   Various companies \textbar{} Belgrade, Serbia}
 
 % ── SKILLS ────────────────────────────────────────────────────────────
+\needspace{5\baselineskip}
 \section{Skills}
 
 \vspace{2pt}
 \noindent
 \begin{minipage}[t]{0.475\textwidth}
-  \skillblock{Design \& Research}{%
-    Figma, Axure RP, HTML/JS prototyping,
-    Design Systems, Design Tokens,
-    Component Libraries,
-    Interaction Design, Visual Design,
-    User Research \& Testing (UserZoom,
-    Optimal Workshop, UXtweak, HotJar)}
+  \skillblock{Design Leadership \& Systems}{%
+    Design Systems (token architecture,
+    multi-brand component libraries),
+    DesignOps, Design Direction,
+    Accessibility, Figma (incl.\ plugin dev),
+    Interaction Design, Visual Design}
 
   \vspace{12pt}
-  \skillblock{Data \& Analytics}{%
-    Google Analytics, VWO, HotJar,
-    Usability Testing, A/B Testing}
+  \skillblock{Research \& Analytics}{%
+    User Research \& Usability Testing,
+    A/B Testing, Google Analytics,
+    VWO, HotJar, UXtweak}
 \end{minipage}%
 \hspace{0.05\textwidth}%
 \begin{minipage}[t]{0.475\textwidth}
-  \skillblock{Leadership}{%
-    Design Strategy, Design Ops,
-    Team Mentoring \& Talent Development,
+  \skillblock{Leadership \& Strategy}{%
+    Design Team Building \& Mentoring,
     Cross-functional Stakeholder Management,
-    Roadmap Planning, Project
-    Management (Jira, Asana, Linear, Notion)}
+    Roadmap Planning, Executive Presentation,
+    Project Management (Jira, Linear, Notion)}
 
   \vspace{12pt}
   \skillblock{Technical}{%
-    HTML/CSS, PHP, JavaScript,
-    Figma Plugin Development,
+    HTML/CSS, JavaScript, PHP,
+    AI-orchestrated delivery (Claude Code),
     MVP/POC Prototyping,
-    Dev Complexity Assessment,
-    AI-orchestrated delivery (Claude Code)}
+    Dev Complexity Assessment}
 \end{minipage}
 
 % ── LANGUAGES ─────────────────────────────────────────────────────────
+\needspace{5\baselineskip}
 \section{Languages}
 
 \begin{itemize}[leftmargin=1.2em, label={•},
@@ -312,6 +315,7 @@ improving how I and my team work.}
 \end{itemize}
 
 % ── EDUCATION ─────────────────────────────────────────────────────────
+\needspace{5\baselineskip}
 \section{Education}
 
 \noindent{\small\bfseries Bachelor of Economics}\\[1pt]
@@ -323,10 +327,5 @@ Megatrend University, Belgrade \hfill 2002\,--\,2008}
 \noindent{\small\bfseries Industrial Design Technician}\\[1pt]
 {\small\color{midgray}School for Design, Belgrade
 \hfill 1995\,--\,1999}
-\begin{itemize}[leftmargin=1.2em, label={•},
-    topsep=2pt, itemsep=0pt, parsep=0pt]
-  \item {\small Established a foundation in design principles
-        and aesthetics.}
-\end{itemize}
 
 \end{document}

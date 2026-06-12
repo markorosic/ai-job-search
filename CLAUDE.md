@@ -2,6 +2,11 @@
 
 <!-- Profile populated via /setup (2026-06-05). Re-run /setup or /setup --section <name> to update. -->
 
+## Writing Style (CVs, cover letters, LinkedIn copy)
+- **No em dashes.** Use a comma or semicolon instead. Marko never uses em dashes; Serbian punctuation conventions favour comma and semicolon.
+- **Plain, direct language.** No jargon-stacking. If a sentence needs unpacking to understand, rewrite it.
+- **No internal product names in public copy.** Describe products generically: "0→1 consumer platform", "a second platform in the portfolio". Never use internal names like "Casino Intelligence" or "data-intelligence platform" in anything public-facing.
+
 ## Role
 This repo is a job application workspace. Claude acts as a career advisor and application assistant for Marko Rosic, helping with:
 1. **Job fit evaluation** - Assess job postings against your profile (skills, experience, behavioral traits)
@@ -19,8 +24,8 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 - **Location:** Belgrade, Serbia (open to EU relocation)
 - **Contact:** marko@rosic.net · +381 60 585 44 55 · portfolio: rosic.net
 - **Languages:** English (fluent / professional), Serbian (native), French (intermediate)
-- **Status:** Serbian citizen — **requires EU visa sponsorship (non-EU)**. Currently an independent design-leadership consultant; actively seeking an in-house Head/Lead design role in the EU.
-- **LinkedIn headline:** "Head of Design | Design Systems | Product Strategy"
+- **Status:** Serbian citizen — **requires EU visa sponsorship (non-EU)**. Currently an independent design-leadership consultant; actively seeking an in-house design role in the EU. **Seniority ladder:** Head of Design is the ideal (hard without EU referrals), Lead is the realistic primary target, and Senior qualifies at really good companies or great projects — as an EU entry to grow from (move up or switch companies once in the EU).
+- **LinkedIn headline:** "Head of Design / Lead Product Designer | Design Systems & DesignOps | Product Strategy | AI-augmented design delivery (Claude Code)"
 
 ### Education
 <!-- List your degrees, most recent first -->
@@ -29,9 +34,14 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 
 ### Professional Experience
 <!-- List your roles, most recent first -->
-- **Design Leadership Consultant** (May 2025 - Present) - **Beyond Clicks Studio** (Independent, Belgrade — remote)
-  - Senior design lead across concurrent engagements: design systems, product strategy, design-engineering workflow
-  - AI-orchestrated product & tooling work; builds functional prototypes and Figma plugins
+- **Design Leadership Consultant** (May 2025 - Present) - **Beyond Clicks Studio** (Independent, Belgrade — remote) — public LinkedIn title: **"Head of Design (Consulting)"**
+  - **Framing rule:** Beyond Clicks is the public umbrella for full-time Head of UX/UI work at an early-stage startup (WYN Global Media — **never name publicly**; iGaming-adjacent). Products: CasinoAtlas (consumer review platform) and Casino Intelligence (AI data platform). In public materials describe generically: no casino / gambling / betting / affiliate wording.
+  - **Design system & pipeline (ADS — Atlas Design System):** Architected and built a Figma-to-WordPress pipeline connecting Figma variables directly to WordPress theme tokens (single source of truth, eliminates design drift); comprehensive design token overhaul across the system; token-based atomic design (tokens, variables, components) implemented as a block-based WordPress theme (migrating off classic ACF)
+  - **Tooling:** Developed Figma plugin updates to automate repetitive design tasks and reduce UI production time across the team; built AI-driven automated workflows using Claude Code
+  - **AI data platform (Casino Intelligence):** Wrote PRDs and defined core architecture for AI-orchestrated data pipelines; engineered URL discovery, crawling, and automated ingestion solutions
+  - **Product UX (consumer platform — My Casino Atlas):** End-to-end UX for logged-in retention flows (login, registration, onboarding, dashboard); designed complex category browsing and progressive filter refinement architecture; conversion optimisation — redesigned key revenue cards and high-fidelity transactional email templates; UI component system for content status states
+  - **DesignOps & team:** Consolidated all design into Figma; introduced Shape Up-style cycles; migrated PM from Trello to Asana via a custom API migration script built in-house; onboarded and trained graphic designer (Dema) on Figma automation, successfully delegating routine production to maintain focus on core product strategy
+  - **Separate engagement:** UX direction for a US youth-sports communication startup (club staff, parents, young athletes)
 - **Head of UX/UI** (Jul 2024 - May 2025) - **Gentoo Media** (Belgrade)
   - Built a company-level design system across multi-brand products; led a cross-functional team of 7 (incl. 2 team leads); cut feature time-to-market by 25%
 - **Lead UX/UI Designer** (May 2021 - Jul 2024) - **Catena Media** (acquired by Gaming Innovation Group, 2023) (Belgrade)

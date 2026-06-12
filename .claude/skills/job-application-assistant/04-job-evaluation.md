@@ -71,6 +71,9 @@ Instead, note the destination's strategic tier and language realism:
   positive *stepping stone*; a bridge role that builds toward EU Blue Card intra-EU mobility
   (12 months) or EU Long-Term Residence (5 years) is strategically valuable.
 - **Secondary:** Spain — conditional (Spanish improving).
+- **Tertiary (home base, Strategy C):** Serbia — no permit needed; an international / EU-HQ
+  employer in Belgrade counts as an EU pathway (intra-company transfer / internal relocation).
+  Rank by EU-pathway signal, not the sponsorship gate (dimension 4 does not apply to Serbian roles).
 - **Lowest:** Italy — hardest non-EU entry (Decreto Flussi quotas).
 
 **Language realism:** discount roles requiring fluent German/Spanish/Italian; upgrade
@@ -95,6 +98,14 @@ an otherwise-similar role with no onward path. See the destination tiers in dime
 - Return to an in-house **Head/Lead design** seat at a mature product company in the EU (relocation + visa sponsorship)
 - Own and scale design-systems and design-org infrastructure that connects to business outcomes
 - Deepen work at the design-engineering boundary with AI-accelerated delivery; pivot out of gambling/affiliate into broader product sectors
+
+**Seniority ladder (calibrate the score, don't gate):**
+- **Head of Design** — ideal, but realistically hard to land without referrals at EU companies; score normally and flag as stretch
+- **Lead** — the realistic primary target; full score when other dimensions fit
+- **Senior IC** — acceptable **only at really good companies or on great projects**: it's an EU
+  entry the candidate can grow from (move up internally or switch companies once in the EU).
+  Do **not** score a senior title at a standout company as a "backwards step" — weigh company
+  quality and EU-entry value instead. A senior role at an unremarkable company *is* a step down — score it low.
 
 **Motivation filter:** Evaluate not just whether you *can* do the tasks, but whether the tasks will *energize* you. Consider:
 - Tasks that energize: building design systems/infrastructure, leading & mentoring designers, problem framing, design-engineering collaboration, AI-orchestrated prototyping, evidence-based iteration

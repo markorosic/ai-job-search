@@ -38,12 +38,16 @@ you a legal springboard into the harder primaries. Three mechanisms make the spr
 - **Country-specific bilateral agreements** ✅ — e.g. the **Slovenia–Serbia employment agreement**
   gives Serbian nationals a streamlined work-permit route feeding into a single permit.
 
-### Two macro-strategies (pursue both in parallel)
+### Three macro-strategies (pursue in parallel)
 
 - **Strategy A — Direct entry to a primary.** Germany is the strongest direct shot (Opportunity
   Card to job-hunt on the ground; shortage-occupation Blue Card threshold in your field).
 - **Strategy B — Foothold-then-hop.** Land first in an easier country (Slovenia / Croatia / Malta /
   Poland / Czechia), then use Blue Card mobility (12 mo) or EU LTR (5 yr) to reach Germany/Netherlands.
+- **Strategy C — Home-base pathway (Serbia).** Stay in Belgrade and join an international /
+  EU-headquartered employer locally; reach the EU later via an **intra-company transfer (EU ICT
+  permit)** or internal relocation. No work authorization needed to start — rank these roles by
+  EU-pathway signal (international/EU-HQ employer) instead of the visa signal.
 
 ---
 
@@ -59,6 +63,7 @@ you a legal springboard into the harder primaries. Three mechanisms make the spr
 | 🇵🇱 **Poland** | **Bridge** | Accessible work permits; large IT sector; lower salary thresholds | English-first tech boards | ⚠️ |
 | 🇨🇿 **Czechia** | **Bridge** | Employee Card / EU Blue Card; growing tech scene | English tech roles exist | ⚠️ |
 | 🇪🇸 **Spain** | **Secondary** | Highly Qualified Professional permit / Startup Law visa; slower bureaucracy | Spanish (learning) helps a lot | ⚠️ |
+| 🇷🇸 **Serbia** | **Tertiary (home base, Strategy C)** | No permit needed (citizen); EU path via **intra-company transfer (EU ICT permit)** from an international employer's Belgrade office | Native | ✅ |
 | 🇮🇹 **Italy** | **Lowest priority** | Non-EU hiring largely gated by **Decreto Flussi quotas** (restrictive); Blue Card path exists but slow | Italian needed for most roles | ⚠️ |
 
 **Takeaway:** Your gut ordering (DE/NL/ES/IT primary; SI/MT/HR/PL/CZ bridge) holds for Germany and

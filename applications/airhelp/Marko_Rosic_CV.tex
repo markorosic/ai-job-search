@@ -1,6 +1,6 @@
 % !TeX recipe = Tectonic
-% CV - Marko Rosic - tailored for Dash0, Director of Design (EMEA Remote)
-% Compile with: cd cv && tectonic Marko_Rosic_CV_dash0.tex
+% CV - Marko Rosic - tailored for AirHelp, Lead Product Designer (Mobile App), Berlin
+% Compile with: cd applications/airhelp && tectonic Marko_Rosic_CV.tex
 \documentclass[a4paper,9.5pt]{article}
 
 % ── Font ──────────────────────────────────────────────────────────────
@@ -37,6 +37,9 @@
 % ── TikZ ──────────────────────────────────────────────────────────────
 \usepackage{tikz}
 \usetikzlibrary{calc}
+
+% ── Needspace ─────────────────────────────────────────────────────────
+\usepackage{needspace}
 
 % ── Section headings ──────────────────────────────────────────────────
 \usepackage{titlesec}
@@ -139,7 +142,7 @@
   ]\small\interlinepenalty=10000%
 }{\end{itemize}}
 
-% ── Skill block: use \newline not \\ to avoid tabular row-break bug ───
+% ── Skill block ───────────────────────────────────────────────────────
 \newcommand{\skillblock}[2]{%
   {\small\bfseries #1}\newline%
   {\small\color{midgray}#2}%
@@ -164,16 +167,15 @@
 % ── SUMMARY ───────────────────────────────────────────────────────────
 \section{Summary}
 
-{\small Product design leader with 15+ years building complex digital
-products at the intersection of design and engineering. I build design
-systems that hold up as products grow, from token architecture and
-multi-brand component libraries to handoff that engineers actually
-use, and have cut development time by 30\% and time-to-market by 25\%.
-I lead design teams in fast-moving product companies and I work best
-close to engineering: designing information-dense interfaces for
-technical users and staying involved in how things are actually built.
-I use AI (including Claude Code) to build faster and to understand
-what it changes for product teams.}
+{\small Product designer with more than 15 years of end-to-end product
+experience, from hypothesis to shipped feature, across high-traffic
+consumer products. I combine evidence-based methodology — user research,
+A/B testing, analytics — with strong design-systems thinking and close
+collaboration with engineering. I use AI tools including Claude Code
+daily for prototyping and tooling, which is how I stay close to what is
+technically possible and find faster paths to validated solutions. I am
+relocating to the EU and looking for a focused IC role in a product team
+where rigour, speed, and craft matter equally.}
 
 % ── EXPERIENCE ────────────────────────────────────────────────────────
 \section{Experience}
@@ -181,18 +183,16 @@ what it changes for product teams.}
 \cventry{5/2025\,--\,Present}{Design Leadership Consultant}{%
   Beyond Clicks Studio (Independent) \textbar{} Belgrade, Serbia (Remote)}
 \begin{cvitems}
-  \item Senior design lead across several engagements at once, advising
-        product and media companies on design systems, product strategy,
-        and how design and engineering work together
-  \item Lead multi-brand design-system and product UX for an
-        international media group: token architecture, component
-        conventions, accessibility, and handoff to engineering
-  \item Lead AI\-orchestrated product and tooling work, owning the
-        problem, the UX, and the research direction while using Claude
-        Code to build faster; designed and built an internal
-        finance-and-operations product end to end as a case study
-  \item Build working prototypes and Figma plugins to close the gap
-        between design and what gets built
+  \item Design-leadership consulting for product and media companies —
+        owning design direction from system architecture to shipped product
+  \item Led end-to-end UX for a 0→1 consumer platform: logged-in
+        retention flows (login, onboarding, dashboard), complex category
+        browsing, and progressive filter refinement architecture
+  \item Conversion optimisation: redesigned key revenue-driving cards and
+        high-fidelity transactional email templates; built a UI component
+        system for content status states
+  \item Built Figma plugins using Claude Code to automate repetitive
+        design tasks and accelerate the design-to-build pipeline
 \end{cvitems}
 
 \cventrynote{7/2024\,--\,5/2025}{Head of UX/UI}{%
@@ -200,57 +200,50 @@ what it changes for product teams.}
   Gentoo Media was established following GiG Media's acquisition of
   Catena Media and subsequent spin-off of its media division.}
 \begin{cvitems}
-  \item Set design direction and standards across multi-brand products
-        through a company-wide design system
-  \item Led a design team of seven, managing two team leads who each
-        ran their own sub-team, and owning their direction, growth,
-        and performance
-  \item Changed how the team worked, cutting time-to-market for new
-        features by 25\%
-  \item Worked closely with engineering so design fit into how they
-        build
-  \item Used analytics and user feedback to keep improving the product
+  \item Set design direction and quality standard across multi-brand
+        products through a company-wide design system
+  \item Led a design team of seven, including two team leads, owning
+        direction, growth, and performance
+  \item Cut time-to-market for new features by 25\% by changing how
+        the team worked with engineering
+  \item Used analytics and user feedback to drive continuous
+        improvement across products
 \end{cvitems}
 
 \cventry{5/2021\,--\,7/2024}{Lead UX/UI Designer}{%
   Catena Media (acquired by GiG Media in 2023) \textbar{} Belgrade, Serbia}
 \begin{cvitems}
-  \item Directed UX from start to finish for high-traffic, multi-market
-        consumer web products, using user-centred methods
-  \item Built a design system for the flagship consumer product that
-        cut development time by 30\%, and later ran it across 10+
-        websites
-  \item Ran workshops with stakeholders to line up design decisions
-        with business goals
-  \item Mentored junior designers and built a team that worked well
-        together
+  \item Directed UX end to end for high-traffic, multi-market consumer
+        web products using hypothesis-driven, user-centred methods
+  \item Built a design system that cut development time by 30\% and
+        scaled to run across 10+ websites
+  \item Ran stakeholder workshops to align design decisions with
+        business goals; drove A/B testing and analytics review cycles
 \end{cvitems}
 
 \cventry{10/2018\,--\,5/2021}{Senior UX/UI Designer}{%
   Catena Media \textbar{} Belgrade, Serbia}
 \begin{cvitems}
-  \item Led the redesign of the flagship consumer product, which raised
+  \item Led the redesign of the flagship consumer product, raising
         mobile traffic by 20\% and user retention by 15\%
-  \item Brought UX research into the product process and moved the team
-        to decisions based on evidence
-  \item Standardised UX practices across the product team
-  \item Moved the team from Sketch to Figma, which improved how
-        designers and engineers worked together
-  \item Completed Catena Leadership Academy, an internal programme on
-        cross-functional leadership and organisational management
+  \item Brought user research and evidence-based decision-making into
+        the product process; standardised UX practices across the team
+  \item Moved the team from Sketch to Figma, improving
+        designer-engineer collaboration
 \end{cvitems}
 
+\needspace{5\baselineskip}
 \cventry{12/2013\,--\,10/2018}{Interaction Designer}{%
   Smith Micro Software, Inc \textbar{} Belgrade, Serbia}
 \begin{cvitems}
+  \item Designed UX for carrier-branded Android apps shipped on Sprint
+        and T-Mobile devices: Visual Voicemail, Voicemail, and Sock
+        Puppets (later integrated into Visual Voicemail)
+  \item Worked within strict carrier brand guidelines and device
+        constraints across multiple variants simultaneously
   \item Designed backend tooling for device management and an IoT
-        location-based notification system, working across consumer
-        interfaces and complex operational data views
-  \item Designed UX for carrier-branded Android apps shipped with
-        Sprint and T-Mobile devices, including Visual Voicemail,
-        Voicemail, and Sock Puppets
-  \item Worked closely with a graphic designer to deliver polished,
-        on-brand interfaces across multiple carrier variants
+        location-based notification system, bridging consumer UX with
+        complex operational interfaces
 \end{cvitems}
 
 \cventry{2009\,--\,2013}{UI Designer}{%
@@ -264,14 +257,14 @@ what it changes for product teams.}
   Mainstream d.o.o. \textbar{} Belgrade, Serbia}
 \begin{cvitems}
   \item Co-founded a dial-up ISP; led operations, finance, and product
-        design during the founding phase. The company later evolved
-        into managed hosting and cloud services
+        design during the founding phase
 \end{cvitems}
 
 \cventry{2000\,--\,2005}{Web Designer/Developer}{%
   Various companies \textbar{} Belgrade, Serbia}
 
 % ── SKILLS ────────────────────────────────────────────────────────────
+\needspace{5\baselineskip}
 \section{Skills}
 
 \vspace{2pt}
@@ -287,26 +280,29 @@ what it changes for product teams.}
   \vspace{12pt}
   \skillblock{Data \& Analytics}{%
     Google Analytics, VWO, HotJar,
-    Usability Testing, A/B Testing}
+    Usability Testing, A/B Testing,
+    Hypothesis-driven design iteration}
 \end{minipage}%
 \hspace{0.05\textwidth}%
 \begin{minipage}[t]{0.475\textwidth}
-  \skillblock{Leadership}{%
-    Team Mentoring \& Talent Development,
-    Cross-functional Stakeholder Management,
-    Design Ops, Roadmap Planning, Project
-    Management (Jira, Asana, Linear, Notion)}
+  \skillblock{Methodology}{%
+    Hypothesis-driven product design,
+    Rapid prototyping \& user validation,
+    Evidence-based decision-making,
+    Cross-functional stakeholder management,
+    DesignOps, Roadmap Planning}
 
   \vspace{12pt}
   \skillblock{Technical}{%
     HTML/CSS, PHP, JavaScript,
     Figma Plugin Development,
+    AI-orchestrated delivery (Claude Code),
     MVP/POC Prototyping,
-    Dev Complexity Assessment,
-    AI-orchestrated delivery (Claude Code)}
+    Dev Complexity Assessment}
 \end{minipage}
 
 % ── LANGUAGES ─────────────────────────────────────────────────────────
+\needspace{5\baselineskip}
 \section{Languages}
 
 \begin{itemize}[leftmargin=1.2em, label={•},
@@ -316,6 +312,7 @@ what it changes for product teams.}
 \end{itemize}
 
 % ── EDUCATION ─────────────────────────────────────────────────────────
+\needspace{5\baselineskip}
 \section{Education}
 
 \noindent{\small\bfseries Bachelor of Economics}\\[1pt]
